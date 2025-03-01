@@ -1,13 +1,11 @@
 console.log("message center script run");
-console.log(import.meta.env.VITE_SOME_KEY);
+console.log(import.meta.env.VITE_SIMON_BACKEND_ENDPOINT);
 
-// const BASE_URL =
-//   import.meta.env.NEXT_PUBLIC_API_KEY ||
-//   "http://localhost:3000/message-center/landing-page";
-
-const BASE_URL = "https://simon-api-dev.enosta.com/message-center/landing-page";
-
-
+const BASE_URL =
+  `${
+    import.meta.env.VITE_SIMON_BACKEND_ENDPOINT
+  }/message-center/landing-page` ||
+  "http://localhost:3000/message-center/landing-page";
 
 const disposition = {
   estimateResidential: 1,
@@ -34,7 +32,7 @@ form.addEventListener("submit", (event) => {
 
   const payload = {
     first_name: "Thien",
-    last_name,
+    last_name: "Pham",
     email: "thien@gmail",
     phone: "0019293949",
     city: "New York",
@@ -46,10 +44,8 @@ form.addEventListener("submit", (event) => {
 
   fetch(BASE_URL, {
     method: "POST",
-    mode: "no-cors",
     headers: {
       "Content-Type": "application/json",
-      referrerPolicy: "no-referrer-when-downgrade",
     },
     body: JSON.stringify(payload),
   })
