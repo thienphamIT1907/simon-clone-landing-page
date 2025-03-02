@@ -3009,7 +3009,7 @@ body.scroll-type-sticky.header-is-divided-top .main-header.scrolled,
 body.scroll-type-sticky.header-is-regular-top-logo .main-header.scrolled,
 body.scroll-type-sticky.header-is-divided-top-logo .main-header.scrolled,
 body.scroll-type-sticky.header-is-regular .main-header.scrolled,
-body.scroll-type-sticky.header-is-divided .main-header.scrolled {top: -165px;}
+body.scroll-type-sticky.header-is-divided .main-header.scrolled {top: 0;}
 
 body.scroll-padding-title .title-outer {
     padding-top: 0!important;

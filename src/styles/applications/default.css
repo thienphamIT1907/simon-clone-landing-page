@@ -202,7 +202,7 @@ body.scroll-type-sticky.header-is-divided .main-header.scrolled {top: -100px;}
 body.scroll-type-sticky.header-is-regular-top .main-header.scrolled,
 body.scroll-type-sticky.header-is-divided-top .main-header.scrolled,
 body.scroll-type-sticky.header-is-regular-top-logo .main-header.scrolled,
-body.scroll-type-sticky.header-is-divided-top-logo .main-header.scrolled {top: -132px;}
+body.scroll-type-sticky.header-is-divided-top-logo .main-header.scrolled {top: 0;}
 body.scroll-type-sticky .main-header.scrollup {top: 0 !important;
 	-webkit-transition: top .5s ease, left .3s ease, right .3s ease;
 	-moz-transition: top .5s ease, left .3s ease, right .3s ease;
