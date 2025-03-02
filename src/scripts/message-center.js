@@ -1,6 +1,3 @@
-console.log("message center script run");
-console.log(import.meta.env.VITE_SIMON_BACKEND_ENDPOINT);
-
 const BASE_URL =
   `${
     import.meta.env.VITE_SIMON_BACKEND_ENDPOINT
@@ -29,36 +26,39 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const last_name = form.elements["last_name"].value;
+  const first_name = form.elements["first_name"].value;
+  const email = form.elements["email"].value;
+  const home_phone = form.elements["home_phone"].value;
+  const city = form.elements["city"].value;
+  const postal_code = form.elements["postal_code"].value;
+  const what_needs_painting = form.elements["what_needs_painting"].value;
 
   const payload = {
-    first_name: "Thien",
-    last_name: "Pham",
-    email: "thien@gmail",
-    phone: "0019293949",
-    city: "New York",
-    postal_code: "A1I",
-    message: "Test Landing page",
-    disposition_id: 1,
-    division_id: 0,
+    last_name,
+    first_name,
+    email,
+    home_phone,
+    city,
+    postal_code,
+    message: what_needs_painting,
+    division_id: division.painting,
+    disposition_id: disposition.estimateResidential,
   };
 
   fetch(BASE_URL, {
     method: "POST",
     headers: {
+      "X-Requested-With": "XMLHttpRequest",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
   })
     .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data);
+    .then(() => {
+      alert("Requested a FREE estimate successfully!");
     })
     .catch((error) => {
       console.error("Error:", error);
     })
-    .finally(() => {
-      alert("ok");
-    });
-
-  console.log({ payload });
+    .finally(() => {});
 });
