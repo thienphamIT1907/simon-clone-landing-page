@@ -20,7 +20,6 @@ const division = {
 };
 
 const form = document.getElementById("painting-estimate-submit-form");
-console.log({ form });
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -47,18 +46,23 @@ form.addEventListener("submit", (event) => {
 
   fetch("/api", {
     method: "POST",
-    headers: {
-      "X-Requested-With": "XMLHttpRequest",
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   })
-    .then((response) => response.json())
-    .then(() => {
-      alert("Requested a FREE estimate successfully!");
+    .then((res) => res.json())
+    .then((data) => {
+      Toastify({
+        text: data?.message,
+        duration: 2000,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "#96c93d",
+        },
+      }).showToast();
     })
-    .catch((error) => {
-      console.error("Error:", error);
-    })
-    .finally(() => {});
+    .catch((err) => console.error("Error:", err));
 });

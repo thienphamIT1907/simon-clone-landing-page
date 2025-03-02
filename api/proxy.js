@@ -1,24 +1,27 @@
 export default async function handler(req, res) {
-  const targetUrl =
+  const BASE_URL =
     `${process.env.VITE_SIMON_BACKEND_ENDPOINT}/message-center/landing-page` ||
     `http://localhost:3000/message-center/landing-page`;
 
-  const response = await fetch(targetUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: req.method !== "GET" ? JSON.stringify(req.body) : undefined,
-  });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
 
-  const data = await response.json();
+  try {
+    const response = await fetch(BASE_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(req.body),
+    });
 
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    const data = await response.json();
 
-  res.status(response.status).json(data);
+    res.status(response.status).json(data);
+
+    console.log({ statusNe: response.status });
+  } catch (error) {
+    console.log({ error });
+  }
 }
