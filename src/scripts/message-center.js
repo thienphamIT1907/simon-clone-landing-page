@@ -36,7 +36,7 @@ form.addEventListener("submit", (event) => {
     last_name,
     first_name,
     email,
-    home_phone,
+    phone: home_phone,
     city,
     postal_code,
     message: what_needs_painting,
