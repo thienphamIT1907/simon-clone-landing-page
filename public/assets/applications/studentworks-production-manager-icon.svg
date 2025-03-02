@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="131" viewBox="0 0 131 131">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_275" data-name="Rectangle 275" width="78.076" height="78" fill="none" stroke="#fff" stroke-width="1"></rect>
+    </clipPath>
+  </defs>
+  <g id="Group_824" data-name="Group 824" transform="translate(-205 -1380)">
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="65.5" cy="65.5" r="65.5" transform="translate(205 1380)" fill="#e52027"></circle>
+    <g id="Group_799" data-name="Group 799" transform="translate(239.971 1404)">
+      <g id="Group_798" data-name="Group 798" clip-path="url(#clip-path)">
+        <path id="Path_184" data-name="Path 184" d="M7.5,45.25A6.853,6.853,0,0,1,1,38.75V24.125A7.871,7.871,0,0,1,9.125,16h35.75s-1.727,8.125-8.125,8.125h-13V68" transform="translate(0.625 10)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></path>
+        <path id="Path_185" data-name="Path 185" d="M12.5,19.25a6.23,6.23,0,0,0,6.5-6.5V9.5A6.23,6.23,0,0,0,12.5,3,6.23,6.23,0,0,0,6,9.5v3.25A6.23,6.23,0,0,0,12.5,19.25Z" transform="translate(3.75 1.875)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></path>
+        <line id="Line_18" data-name="Line 18" y2="41" transform="translate(8.029 37)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></line>
+        <line id="Line_19" data-name="Line 19" y2="24" transform="translate(16.029 54)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></line>
+        <path id="Path_186" data-name="Path 186" d="M35,6.478v13c6.5-2.47,13.442-1.194,19.547,3.25L49.534,14.6l5.042-4.875C48.471,5.284,41.5,4.008,35,6.478Z" transform="translate(21.875 3.272)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></path>
+        <path id="Path_187" data-name="Path 187" d="M24,3.63V16.643c4.875-2.134,13-2.234,17.875,0V3.63C37,1.4,28.875,1.5,24,3.63Z" transform="translate(15 1.245)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></path>
+        <line id="Line_20" data-name="Line 20" y2="26" transform="translate(39.029)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></line>
+        <line id="Line_21" data-name="Line 21" y2="44" transform="translate(39.029 34)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"></line>
+      </g>
+    </g>
+  </g>
+</svg>

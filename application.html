@@ -1,0 +1,4901 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://studentworks.com/recrutement/#apply -->
+<html
+  lang="en-US"
+  class="not-admin js_active vc_desktop vc_transform vc_transform"
+>
+  <head data-locator-hook-status-message="No valid renderers found.">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=yes"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://studentworks.com/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://studentworks.com/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://studentworks.com/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="https://studentworks.com/safari-pinned-tab.svg"
+      color="#e52027"
+    />
+    <meta name="msapplication-TileColor" content="#e52027" />
+    <meta name="theme-color" content="#e52027" />
+
+    <script
+      data-cfasync="false"
+      data-no-defer="1"
+      data-no-minify="1"
+      data-no-optimize="1"
+    >
+      var Arrive = (function (c, w) {
+          "use strict";
+          if (c.MutationObserver && "undefined" != typeof HTMLElement) {
+            var r,
+              a = 0,
+              u =
+                ((r =
+                  HTMLElement.prototype.matches ||
+                  HTMLElement.prototype.webkitMatchesSelector ||
+                  HTMLElement.prototype.mozMatchesSelector ||
+                  HTMLElement.prototype.msMatchesSelector),
+                {
+                  matchesSelector: function (e, t) {
+                    return e instanceof HTMLElement && r.call(e, t);
+                  },
+                  addMethod: function (e, t, r) {
+                    var a = e[t];
+                    e[t] = function () {
+                      return r.length == arguments.length
+                        ? r.apply(this, arguments)
+                        : "function" == typeof a
+                        ? a.apply(this, arguments)
+                        : void 0;
+                    };
+                  },
+                  callCallbacks: function (e, t) {
+                    t &&
+                      t.options.onceOnly &&
+                      1 == t.firedElems.length &&
+                      (e = [e[0]]);
+                    for (var r, a = 0; (r = e[a]); a++)
+                      r && r.callback && r.callback.call(r.elem, r.elem);
+                    t &&
+                      t.options.onceOnly &&
+                      1 == t.firedElems.length &&
+                      t.me.unbindEventWithSelectorAndCallback.call(
+                        t.target,
+                        t.selector,
+                        t.callback
+                      );
+                  },
+                  checkChildNodesRecursively: function (e, t, r, a) {
+                    for (var i, n = 0; (i = e[n]); n++)
+                      r(i, t, a) && a.push({ callback: t.callback, elem: i }),
+                        0 < i.childNodes.length &&
+                          u.checkChildNodesRecursively(i.childNodes, t, r, a);
+                  },
+                  mergeArrays: function (e, t) {
+                    var r,
+                      a = {};
+                    for (r in e) e.hasOwnProperty(r) && (a[r] = e[r]);
+                    for (r in t) t.hasOwnProperty(r) && (a[r] = t[r]);
+                    return a;
+                  },
+                  toElementsArray: function (e) {
+                    return (e =
+                      void 0 !== e && ("number" != typeof e.length || e === c)
+                        ? [e]
+                        : e);
+                  },
+                }),
+              e =
+                ((l.prototype.addEvent = function (e, t, r, a) {
+                  a = {
+                    target: e,
+                    selector: t,
+                    options: r,
+                    callback: a,
+                    firedElems: [],
+                  };
+                  return (
+                    this._beforeAdding && this._beforeAdding(a),
+                    this._eventsBucket.push(a),
+                    a
+                  );
+                }),
+                (l.prototype.removeEvent = function (e) {
+                  for (
+                    var t, r = this._eventsBucket.length - 1;
+                    (t = this._eventsBucket[r]);
+                    r--
+                  )
+                    e(t) &&
+                      (this._beforeRemoving && this._beforeRemoving(t),
+                      (t = this._eventsBucket.splice(r, 1)) &&
+                        t.length &&
+                        (t[0].callback = null));
+                }),
+                (l.prototype.beforeAdding = function (e) {
+                  this._beforeAdding = e;
+                }),
+                (l.prototype.beforeRemoving = function (e) {
+                  this._beforeRemoving = e;
+                }),
+                l),
+              t = function (i, n) {
+                var o = new e(),
+                  l = this,
+                  s = { fireOnAttributesModification: !1 };
+                return (
+                  o.beforeAdding(function (t) {
+                    var e = t.target;
+                    (e !== c.document && e !== c) ||
+                      (e = document.getElementsByTagName("html")[0]);
+                    var r = new MutationObserver(function (e) {
+                        n.call(this, e, t);
+                      }),
+                      a = i(t.options);
+                    r.observe(e, a), (t.observer = r), (t.me = l);
+                  }),
+                  o.beforeRemoving(function (e) {
+                    e.observer.disconnect();
+                  }),
+                  (this.bindEvent = function (e, t, r) {
+                    t = u.mergeArrays(s, t);
+                    for (
+                      var a = u.toElementsArray(this), i = 0;
+                      i < a.length;
+                      i++
+                    )
+                      o.addEvent(a[i], e, t, r);
+                  }),
+                  (this.unbindEvent = function () {
+                    var r = u.toElementsArray(this);
+                    o.removeEvent(function (e) {
+                      for (var t = 0; t < r.length; t++)
+                        if (this === w || e.target === r[t]) return !0;
+                      return !1;
+                    });
+                  }),
+                  (this.unbindEventWithSelectorOrCallback = function (r) {
+                    var a = u.toElementsArray(this),
+                      i = r,
+                      e =
+                        "function" == typeof r
+                          ? function (e) {
+                              for (var t = 0; t < a.length; t++)
+                                if (
+                                  (this === w || e.target === a[t]) &&
+                                  e.callback === i
+                                )
+                                  return !0;
+                              return !1;
+                            }
+                          : function (e) {
+                              for (var t = 0; t < a.length; t++)
+                                if (
+                                  (this === w || e.target === a[t]) &&
+                                  e.selector === r
+                                )
+                                  return !0;
+                              return !1;
+                            };
+                    o.removeEvent(e);
+                  }),
+                  (this.unbindEventWithSelectorAndCallback = function (r, a) {
+                    var i = u.toElementsArray(this);
+                    o.removeEvent(function (e) {
+                      for (var t = 0; t < i.length; t++)
+                        if (
+                          (this === w || e.target === i[t]) &&
+                          e.selector === r &&
+                          e.callback === a
+                        )
+                          return !0;
+                      return !1;
+                    });
+                  }),
+                  this
+                );
+              },
+              i = new (function () {
+                var s = {
+                  fireOnAttributesModification: !1,
+                  onceOnly: !1,
+                  existing: !1,
+                };
+                function n(e, t, r) {
+                  return (
+                    !(
+                      !u.matchesSelector(e, t.selector) ||
+                      (e._id === w && (e._id = a++),
+                      -1 != t.firedElems.indexOf(e._id))
+                    ) && (t.firedElems.push(e._id), !0)
+                  );
+                }
+                var c = (i = new t(
+                  function (e) {
+                    var t = { attributes: !1, childList: !0, subtree: !0 };
+                    return (
+                      e.fireOnAttributesModification && (t.attributes = !0), t
+                    );
+                  },
+                  function (e, i) {
+                    e.forEach(function (e) {
+                      var t = e.addedNodes,
+                        r = e.target,
+                        a = [];
+                      null !== t && 0 < t.length
+                        ? u.checkChildNodesRecursively(t, i, n, a)
+                        : "attributes" === e.type &&
+                          n(r, i) &&
+                          a.push({ callback: i.callback, elem: r }),
+                        u.callCallbacks(a, i);
+                    });
+                  }
+                )).bindEvent;
+                return (
+                  (i.bindEvent = function (e, t, r) {
+                    t = void 0 === r ? ((r = t), s) : u.mergeArrays(s, t);
+                    var a = u.toElementsArray(this);
+                    if (t.existing) {
+                      for (var i = [], n = 0; n < a.length; n++)
+                        for (
+                          var o = a[n].querySelectorAll(e), l = 0;
+                          l < o.length;
+                          l++
+                        )
+                          i.push({ callback: r, elem: o[l] });
+                      if (t.onceOnly && i.length)
+                        return r.call(i[0].elem, i[0].elem);
+                      setTimeout(u.callCallbacks, 1, i);
+                    }
+                    c.call(this, e, t, r);
+                  }),
+                  i
+                );
+              })(),
+              o = new (function () {
+                var a = {};
+                function i(e, t) {
+                  return u.matchesSelector(e, t.selector);
+                }
+                var n = (o = new t(
+                  function () {
+                    return { childList: !0, subtree: !0 };
+                  },
+                  function (e, r) {
+                    e.forEach(function (e) {
+                      var t = e.removedNodes,
+                        e = [];
+                      null !== t &&
+                        0 < t.length &&
+                        u.checkChildNodesRecursively(t, r, i, e),
+                        u.callCallbacks(e, r);
+                    });
+                  }
+                )).bindEvent;
+                return (
+                  (o.bindEvent = function (e, t, r) {
+                    (t = void 0 === r ? ((r = t), a) : u.mergeArrays(a, t)),
+                      n.call(this, e, t, r);
+                  }),
+                  o
+                );
+              })();
+            d(HTMLElement.prototype),
+              d(NodeList.prototype),
+              d(HTMLCollection.prototype),
+              d(HTMLDocument.prototype),
+              d(Window.prototype);
+            var n = {};
+            return s(i, n, "unbindAllArrive"), s(o, n, "unbindAllLeave"), n;
+          }
+          function l() {
+            (this._eventsBucket = []),
+              (this._beforeAdding = null),
+              (this._beforeRemoving = null);
+          }
+          function s(e, t, r) {
+            u.addMethod(t, r, e.unbindEvent),
+              u.addMethod(t, r, e.unbindEventWithSelectorOrCallback),
+              u.addMethod(t, r, e.unbindEventWithSelectorAndCallback);
+          }
+          function d(e) {
+            (e.arrive = i.bindEvent),
+              s(i, e, "unbindArrive"),
+              (e.leave = o.bindEvent),
+              s(o, e, "unbindLeave");
+          }
+        })(window, void 0),
+        ewww_webp_supported = !1;
+      function check_webp_feature(e, t) {
+        var r;
+        ewww_webp_supported
+          ? t(ewww_webp_supported)
+          : (((r = new Image()).onload = function () {
+              (ewww_webp_supported = 0 < r.width && 0 < r.height),
+                t(ewww_webp_supported);
+            }),
+            (r.onerror = function () {
+              t(!1);
+            }),
+            (r.src =
+              "data:image/webp;base64," +
+              {
+                alpha:
+                  "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+                animation:
+                  "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
+              }[e]));
+      }
+      function ewwwLoadImages(e) {
+        if (e) {
+          for (
+            var t = document.querySelectorAll(
+                ".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"
+              ),
+              r = 0,
+              a = t.length;
+            r < a;
+            r++
+          )
+            ewwwAttr(t[r], "data-src", t[r].getAttribute("data-webp")),
+              ewwwAttr(
+                t[r],
+                "data-thumbnail",
+                t[r].getAttribute("data-webp-thumbnail")
+              );
+          for (
+            var i = document.querySelectorAll(
+                "div.woocommerce-product-gallery__image"
+              ),
+              r = 0,
+              a = i.length;
+            r < a;
+            r++
+          )
+            ewwwAttr(i[r], "data-thumb", i[r].getAttribute("data-webp-thumb"));
+        }
+        for (
+          var n = document.querySelectorAll("video"), r = 0, a = n.length;
+          r < a;
+          r++
+        )
+          ewwwAttr(
+            n[r],
+            "poster",
+            e
+              ? n[r].getAttribute("data-poster-webp")
+              : n[r].getAttribute("data-poster-image")
+          );
+        for (
+          var o,
+            l = document.querySelectorAll("img.ewww_webp_lazy_load"),
+            r = 0,
+            a = l.length;
+          r < a;
+          r++
+        )
+          e &&
+            (ewwwAttr(
+              l[r],
+              "data-lazy-srcset",
+              l[r].getAttribute("data-lazy-srcset-webp")
+            ),
+            ewwwAttr(
+              l[r],
+              "data-srcset",
+              l[r].getAttribute("data-srcset-webp")
+            ),
+            ewwwAttr(
+              l[r],
+              "data-lazy-src",
+              l[r].getAttribute("data-lazy-src-webp")
+            ),
+            ewwwAttr(l[r], "data-src", l[r].getAttribute("data-src-webp")),
+            ewwwAttr(
+              l[r],
+              "data-orig-file",
+              l[r].getAttribute("data-webp-orig-file")
+            ),
+            ewwwAttr(
+              l[r],
+              "data-medium-file",
+              l[r].getAttribute("data-webp-medium-file")
+            ),
+            ewwwAttr(
+              l[r],
+              "data-large-file",
+              l[r].getAttribute("data-webp-large-file")
+            ),
+            null != (o = l[r].getAttribute("srcset")) &&
+              !1 !== o &&
+              o.includes("R0lGOD") &&
+              ewwwAttr(l[r], "src", l[r].getAttribute("data-lazy-src-webp"))),
+            (l[r].className = l[r].className.replace(
+              /\bewww_webp_lazy_load\b/,
+              ""
+            ));
+        for (
+          var s = document.querySelectorAll(".ewww_webp"), r = 0, a = s.length;
+          r < a;
+          r++
+        )
+          e
+            ? (ewwwAttr(s[r], "srcset", s[r].getAttribute("data-srcset-webp")),
+              ewwwAttr(s[r], "src", s[r].getAttribute("data-src-webp")),
+              ewwwAttr(
+                s[r],
+                "data-orig-file",
+                s[r].getAttribute("data-webp-orig-file")
+              ),
+              ewwwAttr(
+                s[r],
+                "data-medium-file",
+                s[r].getAttribute("data-webp-medium-file")
+              ),
+              ewwwAttr(
+                s[r],
+                "data-large-file",
+                s[r].getAttribute("data-webp-large-file")
+              ),
+              ewwwAttr(
+                s[r],
+                "data-large_image",
+                s[r].getAttribute("data-webp-large_image")
+              ),
+              ewwwAttr(s[r], "data-src", s[r].getAttribute("data-webp-src")))
+            : (ewwwAttr(s[r], "srcset", s[r].getAttribute("data-srcset-img")),
+              ewwwAttr(s[r], "src", s[r].getAttribute("data-src-img"))),
+            (s[r].className = s[r].className.replace(
+              /\bewww_webp\b/,
+              "ewww_webp_loaded"
+            ));
+        window.jQuery &&
+          jQuery.fn.isotope &&
+          jQuery.fn.imagesLoaded &&
+          (jQuery(".fusion-posts-container-infinite").imagesLoaded(function () {
+            jQuery(".fusion-posts-container-infinite").hasClass("isotope") &&
+              jQuery(".fusion-posts-container-infinite").isotope();
+          }),
+          jQuery(
+            ".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper"
+          ).imagesLoaded(function () {
+            jQuery(
+              ".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper"
+            ).isotope();
+          }));
+      }
+      function ewwwWebPInit(e) {
+        ewwwLoadImages(e),
+          ewwwNggLoadGalleries(e),
+          document.arrive(".ewww_webp", function () {
+            ewwwLoadImages(e);
+          }),
+          document.arrive(".ewww_webp_lazy_load", function () {
+            ewwwLoadImages(e);
+          }),
+          document.arrive("videos", function () {
+            ewwwLoadImages(e);
+          }),
+          "loading" == document.readyState
+            ? document.addEventListener("DOMContentLoaded", ewwwJSONParserInit)
+            : ("undefined" != typeof galleries && ewwwNggParseGalleries(e),
+              ewwwWooParseVariations(e));
+      }
+      function ewwwAttr(e, t, r) {
+        null != r && !1 !== r && e.setAttribute(t, r);
+      }
+      function ewwwJSONParserInit() {
+        "undefined" != typeof galleries &&
+          check_webp_feature("alpha", ewwwNggParseGalleries),
+          check_webp_feature("alpha", ewwwWooParseVariations);
+      }
+      function ewwwWooParseVariations(e) {
+        if (e)
+          for (
+            var t = document.querySelectorAll("form.variations_form"),
+              r = 0,
+              a = t.length;
+            r < a;
+            r++
+          ) {
+            var i = t[r].getAttribute("data-product_variations"),
+              n = !1;
+            try {
+              for (var o in (i = JSON.parse(i)))
+                void 0 !== i[o] &&
+                  void 0 !== i[o].image &&
+                  (void 0 !== i[o].image.src_webp &&
+                    ((i[o].image.src = i[o].image.src_webp), (n = !0)),
+                  void 0 !== i[o].image.srcset_webp &&
+                    ((i[o].image.srcset = i[o].image.srcset_webp), (n = !0)),
+                  void 0 !== i[o].image.full_src_webp &&
+                    ((i[o].image.full_src = i[o].image.full_src_webp),
+                    (n = !0)),
+                  void 0 !== i[o].image.gallery_thumbnail_src_webp &&
+                    ((i[o].image.gallery_thumbnail_src =
+                      i[o].image.gallery_thumbnail_src_webp),
+                    (n = !0)),
+                  void 0 !== i[o].image.thumb_src_webp &&
+                    ((i[o].image.thumb_src = i[o].image.thumb_src_webp),
+                    (n = !0)));
+              n && ewwwAttr(t[r], "data-product_variations", JSON.stringify(i));
+            } catch (e) {}
+          }
+      }
+      function ewwwNggParseGalleries(e) {
+        if (e)
+          for (var t in galleries) {
+            var r = galleries[t];
+            galleries[t].images_list = ewwwNggParseImageList(r.images_list);
+          }
+      }
+      function ewwwNggLoadGalleries(e) {
+        e &&
+          document.addEventListener("ngg.galleria.themeadded", function (e, t) {
+            (window.ngg_galleria._create_backup = window.ngg_galleria.create),
+              (window.ngg_galleria.create = function (e, t) {
+                var r = $(e).data("id");
+                return (
+                  (galleries["gallery_" + r].images_list =
+                    ewwwNggParseImageList(
+                      galleries["gallery_" + r].images_list
+                    )),
+                  window.ngg_galleria._create_backup(e, t)
+                );
+              });
+          });
+      }
+      function ewwwNggParseImageList(e) {
+        for (var t in e) {
+          var r = e[t];
+          if (
+            (void 0 !== r["image-webp"] &&
+              ((e[t].image = r["image-webp"]), delete e[t]["image-webp"]),
+            void 0 !== r["thumb-webp"] &&
+              ((e[t].thumb = r["thumb-webp"]), delete e[t]["thumb-webp"]),
+            void 0 !== r.full_image_webp &&
+              ((e[t].full_image = r.full_image_webp),
+              delete e[t].full_image_webp),
+            void 0 !== r.srcsets)
+          )
+            for (var a in r.srcsets)
+              (nggSrcset = r.srcsets[a]),
+                void 0 !== r.srcsets[a + "-webp"] &&
+                  ((e[t].srcsets[a] = r.srcsets[a + "-webp"]),
+                  delete e[t].srcsets[a + "-webp"]);
+          if (void 0 !== r.full_srcsets)
+            for (var i in r.full_srcsets)
+              (nggFSrcset = r.full_srcsets[i]),
+                void 0 !== r.full_srcsets[i + "-webp"] &&
+                  ((e[t].full_srcsets[i] = r.full_srcsets[i + "-webp"]),
+                  delete e[t].full_srcsets[i + "-webp"]);
+        }
+        return e;
+      }
+      check_webp_feature("alpha", ewwwWebPInit);
+    </script>
+    <title>Recrutement - Student Works - Painting</title>
+    <style>
+      img:is([sizes="auto" i], [sizes^="auto," i]) {
+        contain-intrinsic-size: 3000px 1500px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css"
+    />
+
+    <style id="wp-emoji-styles-inline-css" type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="./src/styles/applications/style.min.css"
+      type="text/css"
+      media="all"
+    />
+    <style id="wpseopress-local-business-style-inline-css" type="text/css">
+      span.wp-block-wpseopress-local-business-field {
+        margin-right: 8px;
+      }
+    </style>
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+      :root {
+        --wp--preset--aspect-ratio--square: 1;
+        --wp--preset--aspect-ratio--4-3: 4/3;
+        --wp--preset--aspect-ratio--3-4: 3/4;
+        --wp--preset--aspect-ratio--3-2: 3/2;
+        --wp--preset--aspect-ratio--2-3: 2/3;
+        --wp--preset--aspect-ratio--16-9: 16/9;
+        --wp--preset--aspect-ratio--9-16: 9/16;
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .is-layout-flex > :is(*, div) {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      .is-layout-grid > :is(*, div) {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :root :where(.wp-block-pullquote) {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="ct_public_css-css"
+      href="./src/styles/applications/cleantalk-public.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="contact-form-7-css"
+      href="./src/styles/applications/styles.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="wpml-blocks-css"
+      href="./src/styles/applications/styles(1).css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="wpcf7-redirect-script-frontend-css"
+      href="./src/styles/applications/wpcf7-redirect-frontend.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="wpml-menu-item-0-css"
+      href="./src/styles/applications/style(1).min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="cmplz-general-css"
+      href="./src/styles/applications/cookieblocker.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="bafg_pro_style-css"
+      href="./src/styles/applications/bafg-pro-style.css"
+      type="text/css"
+      media="all"
+    />
+    <style id="bafg_pro_style-inline-css" type="text/css">
+      .bafg_filter_controls {
+        text-align: left;
+      }
+      .bafg_filter_controls .bafg-filter-control {
+        border-radius: 2px;
+        color: #fff;
+        border-color: #0274be;
+        background-color: #0274be;
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+      }
+
+      .bafg_filter_controls .bafg-filter-control:hover,
+      .bafg_filter_controls .bafg-filter-control:focus,
+      .bafg_filter_controls .bafg-filter-control.bafg-filter-active {
+        color: #fff;
+        border-color: #4ed444;
+        background-color: #4ed444;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="font-awesome-free-css"
+      href="./src/styles/applications/all.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="bafg-responsive-pro-css"
+      href="./src/styles/applications/responsive.css"
+      type="text/css"
+      media="all"
+    />
+    <!-- <link
+      rel="stylesheet"
+      id="fontawesome-css"
+      href="./src/styles/applications/fontawesome.min.css"
+      type="text/css"
+      media="all"
+    /> -->
+    <link
+      rel="stylesheet"
+      id="reset-css"
+      href="./src/styles/applications/reset.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="select2-css"
+      href="./src/styles/applications/select2.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="remodal-css"
+      href="./src/styles/applications/remodal.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="remodal-default-theme-css"
+      href="./src/styles/applications/remodal-default-theme.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="default-css"
+      href="./src/styles/applications/default.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="options-css"
+      href="./src/styles/applications/options.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="js_composer_front-css"
+      href="./src/styles/applications/js_composer.min.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="./src/styles/applications/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="bafg_twentytwenty-css"
+      href="./src/styles/applications/twentytwenty.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="bafg-style-css"
+      href="./src/styles/applications/bafg-style.css"
+      type="text/css"
+      media="all"
+    />
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/jquery.min.js"
+      id="jquery-core-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/jquery-migrate.min.js"
+      id="jquery-migrate-js"
+    ></script>
+    <script
+      type="text/javascript"
+      data-pagespeed-no-defer=""
+      src="./src/scripts/applications/apbct-public-bundle.min.js"
+      id="ct_public_functions-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/ct-bot-detector-wrapper.js"
+      id="ct_bot_detector-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/jquery.event.move.js"
+      id="eventMove-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/jquery.twentytwenty.js"
+      id="bafg_twentytwenty-js"
+    ></script>
+
+    <link
+      rel="alternate"
+      title="JSON"
+      type="application/json"
+      href="https://studentworks.com/wp-json/wp/v2/pages/209"
+    />
+    <link
+      rel="alternate"
+      title="oEmbed (JSON)"
+      type="application/json+oembed"
+      href="https://studentworks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstudentworks.com%2Frecrutement%2F"
+    />
+
+    <meta name="generator" content="WPML ver:4.6.13 stt:1,4;" />
+    <style>
+      .cmplz-hidden {
+        display: none !important;
+      }
+    </style>
+    <meta
+      name="generator"
+      content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."
+    />
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+      .vc_custom_1691608986238 {
+        background-color: #e9e6e2 !important;
+      }
+      .vc_custom_1691611086776 {
+        background-image: url(https://studentworks.com/wp-content/uploads/2023/08/studentworks-what-does-job-for-you-bg-scaled.jpg?id=250) !important;
+      }
+      .vc_custom_1691612568580 {
+        background-color: #e9e6e2 !important;
+      }
+      .vc_custom_1698349638371 {
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+      }
+      .vc_custom_1698349643808 {
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+      }
+      .vc_custom_1691611797406 {
+        background-image: url(https://studentworks.com/wp-content/uploads/2023/08/studentworks-apply-now-img.jpg?id=260) !important;
+        border-radius: 20px !important;
+      }
+    </style>
+    <noscript
+      ><style>
+        .wpb_animate_when_almost_visible {
+          opacity: 1;
+        }
+      </style></noscript
+    >
+    <style id="keyframesjs-stylesheet"></style>
+    <link
+      href="./src/styles/applications/banner-1-optin.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    data-rsssl="1"
+    class="page-template-default page page-id-209 multisite-id-1 multisite-primary sw-region-ontario container-width-1600 header-is-regular-top-logo scroll-type-sticky scroll-padding-title scroll-padding-slider wpb-js-composer js-comp-ver-7.9 vc_responsive webp-support cmplz-marketing cmplz-statistics cmplz-preferences cmplz-functional cmplz-ca cmplz-optin"
+  >
+    <div class="wrapper">
+      <div class="wrapper-inner">
+        <header
+          class="main-header main-header-regular-top-logo scrollmin scrolled"
+        >
+          <div class="header-container">
+            <div class="container">
+              <div class="header-left">
+                <div class="logo-wrapper">
+                  <a href="https://studentworks.com/">
+                    <img
+                      src="./public/assets/studentsworks-logo.svg"
+                      alt="Student Works - Painting"
+                      class="logo1"
+                    />
+                    <img
+                      src="./public/assets/applications/studentsworks-logo-fr-1.svg"
+                      alt="Student Works - Painting"
+                      class="logo2"
+                    />
+                    <img
+                      src="./public/assets/applications/studentsworks-logo-plain.svg"
+                      alt="Student Works - Painting"
+                      class="logo3"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="header-middle">
+                <a href="https://studentworks.com/recrutement/#regions"
+                  ><i class="fas fa-map-marker-alt"></i>Ontario<i
+                    class="fas fa-chevron-down"
+                  ></i
+                ></a>
+              </div>
+              <div class="header-right">
+                <div class="header-top">
+                  <div class="header-top-right">
+                    <div
+                      class="widget header-top-widget widget_text header-top-right-widget"
+                    >
+                      <div class="textwidget">
+                        <div class="header-email">
+                          <a href="mailto:office@studentworks.com"
+                            ><i class="fas fa-envelope"></i>Email us</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="widget header-top-widget widget_nav_menu header-top-right-widget"
+                    >
+                      <div class="menu-top-menu-container">
+                        <ul id="menu-top-menu" class="menu">
+                          <li
+                            id="menu-item-39"
+                            class="header-phone menu-item menu-item-type-custom menu-item-object-custom menu-item-39"
+                          >
+                            <a href="tel:+18008031100"
+                              ><i class="fas fa-phone-alt"></i>1-800-803-1100</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-34"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"
+                          >
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://www.facebook.com/studentworks.program"
+                              ><i class="fab fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li
+                            id="menu-item-35"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"
+                          >
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://www.instagram.com/studentworks.program/"
+                              ><i class="fab fa-instagram"></i
+                            ></a>
+                          </li>
+                          <li
+                            id="menu-item-905"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-905"
+                          >
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://ca.linkedin.com/company/studentworksmanagementprogram"
+                              ><i class="fab fa-linkedin-in"></i
+                            ></a>
+                          </li>
+                          <li
+                            id="menu-item-36"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"
+                          >
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://podcasts.apple.com/ca/podcast/leaders-of-tomorrow-podcast/id1448651718"
+                              ><i class="fas fa-podcast"></i
+                            ></a>
+                          </li>
+                          <li
+                            id="menu-item-wpml-ls-9-fr"
+                            class="menu-item wpml-ls-slot-9 wpml-ls-item wpml-ls-item-fr wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-9-fr"
+                          >
+                            <a
+                              title="Fr"
+                              href="https://peintresetudiants.ca/recrutement/"
+                              ><span class="wpml-ls-native" lang="fr"
+                                >Fr</span
+                              ></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-bottom">
+                  <div class="header-bottom-right">
+                    <div id="main-menu-container" class="main-menu-container">
+                      <ul id="main-menu" class="main-menu">
+                        <li
+                          id="menu-item-40"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"
+                        >
+                          <a href="https://studentworks.com/homeowners/#about"
+                            >About</a
+                          >
+                        </li>
+                        <li
+                          id="menu-item-41"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"
+                        >
+                          <a
+                            href="https://studentworks.com/homeowners/#whyChooseUs"
+                            >Why choose us</a
+                          >
+                        </li>
+                        <li
+                          id="menu-item-42"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"
+                        >
+                          <a href="https://studentworks.com/homeowners/#reviews"
+                            >Reviews</a
+                          >
+                        </li>
+                        <li
+                          id="menu-item-633"
+                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-633"
+                        >
+                          <a href="https://studentworks.com/contact/"
+                            >Contact</a
+                          >
+                        </li>
+                        <li
+                          id="menu-item-44"
+                          class="estimate-btn menu-item menu-item-type-custom menu-item-object-custom menu-item-44"
+                        >
+                          <a href="https://studentworks.com/free-estimate/"
+                            >Get a free estimate</a
+                          >
+                        </li>
+                        <li
+                          id="menu-item-wpml-ls-10-fr"
+                          class="menu-item wpml-ls-slot-10 wpml-ls-item wpml-ls-item-fr wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-10-fr"
+                        >
+                          <a
+                            title="Fr"
+                            href="https://peintresetudiants.ca/recrutement/"
+                            ><span class="wpml-ls-native" lang="fr">Fr</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="widget-header-bottom-right">
+                      <div
+                        class="widget header-bottom-widget widget_text header-bottom-right-widget"
+                      >
+                        <div class="textwidget">
+                          <ul class="estimate-btn-menu">
+                            <li>
+                              <a href="https://studentworks.com/recrutement/#"
+                                >Get a free estimate
+                                <i class="fas fa-chevron-down"></i
+                              ></a>
+                              <ul
+                                class="estimate-btn-sub-menu"
+                                style="display: none"
+                              >
+                                <li>
+                                  <a
+                                    href="https://studentworks.com/free-estimate/"
+                                    >Free painting estimate</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    href="https://studentworkswindowcleaning.com/free-estimate/"
+                                    >Free window cleaning estimate</a
+                                  >
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-mobile">
+            <div class="header-mobile-inner-padding">
+              <div class="header-mobile-inner">
+                <div class="header-mobile-logo position-left">
+                  <a href="https://studentworks.com/">
+                    <img
+                      src="./public/assets/applications/studentsworks-logo.svg"
+                      alt="Student Works - Painting"
+                      class="logo1 logo-mobile-1"
+                    />
+                    <img
+                      src="./public/assets/applications/studentsworks-logo-fr-1.svg"
+                      alt="Student Works - Painting"
+                      class="logo2 logo-mobile-2"
+                    />
+                    <img
+                      src="./public/assets/applications/studentsworks-logo-plain.svg"
+                      alt="Student Works - Painting"
+                      class="logo3 logo-mobile-3"
+                    />
+                  </a>
+                </div>
+                <div class="header-mobile-menu-btn position-right">
+                  <a
+                    href="javascript:void(0)"
+                    class="mobile-menu-btn"
+                    aria-label="Open menu"
+                    ><i class="fas fa-bars"></i
+                  ></a>
+                </div>
+                <div class="header-mobile-phone position-right">
+                  <a href="tel:+18008031100"
+                    ><i class="fas fa-phone-alt"></i
+                  ></a>
+                </div>
+                <div class="widget-header-bottom-right">
+                  <div
+                    class="widget header-bottom-widget widget_text header-bottom-right-widget"
+                  >
+                    <div class="textwidget">
+                      <ul class="estimate-btn-menu">
+                        <li>
+                          <a href="https://studentworks.com/recrutement/#"
+                            >Get a free estimate
+                            <i class="fas fa-chevron-down"></i
+                          ></a>
+                          <ul
+                            class="estimate-btn-sub-menu"
+                            style="display: none"
+                          >
+                            <li>
+                              <a href="https://studentworks.com/free-estimate/"
+                                >Free painting estimate</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://studentworkswindowcleaning.com/free-estimate/"
+                                >Free window cleaning estimate</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-mobile-menu">
+              <div id="mobile-menu-container" class="mobile-menu-container">
+                <ul id="mobile-menu" class="mobile-menu">
+                  <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"
+                  >
+                    <a href="https://studentworks.com/homeowners/#about"
+                      >About</a
+                    >
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"
+                  >
+                    <a href="https://studentworks.com/homeowners/#whyChooseUs"
+                      >Why choose us</a
+                    >
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"
+                  >
+                    <a href="https://studentworks.com/homeowners/#reviews"
+                      >Reviews</a
+                    >
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-633"
+                  >
+                    <a href="https://studentworks.com/contact/">Contact</a>
+                  </li>
+                  <li
+                    class="estimate-btn menu-item menu-item-type-custom menu-item-object-custom menu-item-44"
+                  >
+                    <a href="https://studentworks.com/free-estimate/"
+                      >Get a free estimate</a
+                    >
+                  </li>
+                  <li
+                    class="menu-item wpml-ls-slot-10 wpml-ls-item wpml-ls-item-fr wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-10-fr"
+                  >
+                    <a
+                      title="Fr"
+                      href="https://peintresetudiants.ca/recrutement/"
+                      ><span class="wpml-ls-native" lang="fr">Fr</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="content-outer">
+          <div class="content" style="min-height: 300px">
+            <div class="content-inner full-width">
+              <div class="wpb-content-wrapper">
+                <div
+                  class="vc_row wpb_row vc_row-fluid looking-job-summer-row row-full-width vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"
+                >
+                  <div
+                    class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill"
+                  >
+                    <div class="vc_column-inner vc_custom_1698349638371">
+                      <div class="wpb_wrapper"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="padding-200 text-center wpb_column vc_column_container vc_col-sm-4"
+                  >
+                    <div class="vc_column-inner">
+                      <div class="wpb_wrapper">
+                        <div class="wpb_text_column wpb_content_element">
+                          <div class="wpb_wrapper">
+                            <h1>
+                              Looking<br />
+                              for a fun<br />
+                              job this<br />
+                              summer ?
+                            </h1>
+                          </div>
+                        </div>
+
+                        <div
+                          class="wpb_text_column wpb_content_element looking-job-summer-subtitle red-text"
+                        >
+                          <div class="wpb_wrapper">
+                            <h5>Student Works</h5>
+                          </div>
+                        </div>
+                        <a href="#apply" target="_self" class="dist-btn"
+                          >Apply Now!</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill"
+                  >
+                    <div class="vc_column-inner vc_custom_1698349643808">
+                      <div class="wpb_wrapper"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="vc_row wpb_row vc_row-fluid padding-100 vc_custom_1691608986238 vc_row-has-fill row-in-grid"
+                >
+                  <div class="container">
+                    <div class="row-in-grid-inner">
+                      <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                          <div class="wpb_wrapper">
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid text-center padding-b-50 row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-12"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <h2>
+                                          We hire for attitude, not experience.
+                                        </h2>
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>We are currently hiring for:</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid hiring-for-row text-center vc_row-o-equal-height vc_row-o-content-middle vc_row-flex row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-1/5"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_single_image wpb_content_element vc_align_center"
+                                    >
+                                      <figure class="wpb_wrapper vc_figure">
+                                        <div
+                                          class="vc_single_image-wrapper vc_box_border_grey"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            src="./public/assets/applications/studentworks-production-manager-icon.svg"
+                                            class="vc_single_image-img attachment-full"
+                                            alt=""
+                                            title="studentworks-production-manager-icon"
+                                          />
+                                        </div>
+                                      </figure>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>Production Manager</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-1/5"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_single_image wpb_content_element vc_align_center"
+                                    >
+                                      <figure class="wpb_wrapper vc_figure">
+                                        <div
+                                          class="vc_single_image-wrapper vc_box_border_grey"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            src="./public/assets/applications/studentworks-crew-chief-icon.svg"
+                                            class="vc_single_image-img attachment-full"
+                                            alt=""
+                                            title="studentworks-crew-chief-icon"
+                                          />
+                                        </div>
+                                      </figure>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>Crew Chief</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-1/5"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_single_image wpb_content_element vc_align_center"
+                                    >
+                                      <figure class="wpb_wrapper vc_figure">
+                                        <div
+                                          class="vc_single_image-wrapper vc_box_border_grey"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            src="./public/assets/applications/studentworks-sales-manager-icon.svg"
+                                            class="vc_single_image-img attachment-full"
+                                            alt=""
+                                            title="studentworks-sales-manager-icon"
+                                          />
+                                        </div>
+                                      </figure>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>Sales Manager</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-1/5"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_single_image wpb_content_element vc_align_center"
+                                    >
+                                      <figure class="wpb_wrapper vc_figure">
+                                        <div
+                                          class="vc_single_image-wrapper vc_box_border_grey"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            src="./public/assets/applications/studentworks-painter-icon.svg"
+                                            class="vc_single_image-img attachment-full"
+                                            alt=""
+                                            title="studentworks-painter-icon"
+                                          />
+                                        </div>
+                                      </figure>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>Painter</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-1/5"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_single_image wpb_content_element vc_align_center"
+                                    >
+                                      <figure class="wpb_wrapper vc_figure">
+                                        <div
+                                          class="vc_single_image-wrapper vc_box_border_grey"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            src="./public/assets/applications/studentworks-marketing-assistant-icon.svg"
+                                            class="vc_single_image-img attachment-full"
+                                            alt=""
+                                            title="studentworks-marketing-assistant-icon"
+                                          />
+                                        </div>
+                                      </figure>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>Marketing Assistant</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="vc_row wpb_row vc_row-fluid vc_custom_1691611086776 vc_row-has-fill row-in-grid"
+                >
+                  <div class="container">
+                    <div class="row-in-grid-inner">
+                      <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                          <div class="wpb_wrapper">
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid what-job-does-for-you-upper-row vc_row-o-equal-height vc_row-o-content-middle vc_row-flex row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>As many hours as you can work.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>
+                                          Hard work and lots of fun in a
+                                          challenging environment.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>
+                                          Leadership opportunities as a crew
+                                          chief or production manager
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid what-job-does-for-you-middle-row white-text text-center row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-12"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <h3>
+                                          What this job does for you&nbsp;?
+                                        </h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid what-job-does-for-you-lower-row vc_row-o-equal-height vc_row-o-content-middle vc_row-flex row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>
+                                          Skills development in communication,
+                                          management &amp; goal-oriented mindset
+                                          (not just painting).
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>
+                                          Employee-centric team environment.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <p>
+                                          Active work that will keep you in
+                                          shape.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="apply"
+                  class="vc_row wpb_row vc_row-fluid apply-row padding-100 row-in-grid"
+                >
+                  <div class="container">
+                    <div class="row-in-grid-inner">
+                      <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                          <div class="wpb_wrapper">
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid apply-now-inner-row vc_row-o-equal-height vc_row-o-content-middle vc_row-flex row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill"
+                              >
+                                <div
+                                  class="vc_column-inner vc_custom_1691611797406"
+                                >
+                                  <div class="wpb_wrapper"></div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-8"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <h2>Apply Now!</h2>
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      class="wpb_text_column wpb_content_element red-text"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <h5>
+                                          If you want to have an unreal summer
+                                          and make great money while doing it.
+                                        </h5>
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      class="wpcf7 js"
+                                      id="wpcf7-f257-p209-o1"
+                                      lang="en-US"
+                                      dir="ltr"
+                                    >
+                                      <div class="screen-reader-response">
+                                        <p
+                                          role="status"
+                                          aria-live="polite"
+                                          aria-atomic="true"
+                                        ></p>
+                                        <ul></ul>
+                                      </div>
+                                      <form
+                                        action="https://studentworks.com/recrutement/#wpcf7-f257-p209-o1"
+                                        method="post"
+                                        class="wpcf7-form init"
+                                        aria-label="Contact form"
+                                        novalidate="novalidate"
+                                        data-status="init"
+                                      >
+                                        <div style="display: none">
+                                          <input
+                                            type="hidden"
+                                            name="_wpcf7"
+                                            value="257"
+                                          />
+                                          <input
+                                            type="hidden"
+                                            name="_wpcf7_version"
+                                            value="5.9.8"
+                                          />
+                                          <input
+                                            type="hidden"
+                                            name="_wpcf7_locale"
+                                            value="en_US"
+                                          />
+                                          <input
+                                            type="hidden"
+                                            name="_wpcf7_unit_tag"
+                                            value="wpcf7-f257-p209-o1"
+                                          />
+                                          <input
+                                            type="hidden"
+                                            name="_wpcf7_container_post"
+                                            value="209"
+                                          />
+                                          <input
+                                            type="hidden"
+                                            name="_wpcf7_posted_data_hash"
+                                            value=""
+                                          />
+                                        </div>
+                                        <div class="vc_row">
+                                          <div class="vc_col-sm-6">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="first_name"
+                                                ><input
+                                                  size="40"
+                                                  maxlength="400"
+                                                  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="First Name*"
+                                                  value=""
+                                                  type="text"
+                                                  name="first_name"
+                                              /></span>
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-6">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="last_name"
+                                                ><input
+                                                  size="40"
+                                                  maxlength="400"
+                                                  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="Last Name*"
+                                                  value=""
+                                                  type="text"
+                                                  name="last_name"
+                                              /></span>
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-6">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="email"
+                                                ><input
+                                                  size="40"
+                                                  maxlength="400"
+                                                  class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-input-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="Email*"
+                                                  value=""
+                                                  type="email"
+                                                  name="email"
+                                              /></span>
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-6">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="phone"
+                                                ><input
+                                                  size="40"
+                                                  maxlength="400"
+                                                  class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel form-input-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="Phone*"
+                                                  value=""
+                                                  type="tel"
+                                                  name="phone"
+                                              /></span>
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-6">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="city"
+                                                ><input
+                                                  size="40"
+                                                  maxlength="400"
+                                                  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="City*"
+                                                  value=""
+                                                  type="text"
+                                                  name="city"
+                                              /></span>
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-6">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="postal_code"
+                                                ><input
+                                                  size="40"
+                                                  maxlength="400"
+                                                  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="Postal Code*"
+                                                  value=""
+                                                  type="text"
+                                                  name="postal_code"
+                                              /></span>
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <div class="vc_row">
+                                          <div class="vc_col-sm-12">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="message"
+                                              >
+                                                <textarea
+                                                  cols="40"
+                                                  rows="6"
+                                                  maxlength="2000"
+                                                  class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-textarea-grey"
+                                                  aria-required="true"
+                                                  aria-invalid="false"
+                                                  placeholder="Message*"
+                                                  name="message"
+                                                ></textarea>
+                                              </span>
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-12 marg-bot-20">
+                                            <p>
+                                              <span
+                                                class="wpcf7-form-control-wrap"
+                                                data-name="acceptance-privacy"
+                                                ><span
+                                                  class="wpcf7-form-control wpcf7-acceptance"
+                                                  ><span class="wpcf7-list-item"
+                                                    ><label
+                                                      ><input
+                                                        type="checkbox"
+                                                        name="acceptance-privacy"
+                                                        value="1"
+                                                        aria-invalid="false"
+                                                      /><span
+                                                        class="wpcf7-list-item-label"
+                                                        >I agree and understand
+                                                        that my information will
+                                                        only be used in
+                                                        accordance with the
+                                                        <a
+                                                          href="https://studentworks.com/privacy-policy/"
+                                                          target="_blank"
+                                                          >company's privacy
+                                                          policy</a
+                                                        >.</span
+                                                      ></label
+                                                    ></span
+                                                  ></span
+                                                ></span
+                                              >
+                                            </p>
+                                          </div>
+                                          <div class="vc_col-sm-12 text-right">
+                                            <input
+                                              class="wpcf7-form-control wpcf7-hidden"
+                                              value="6"
+                                              type="hidden"
+                                              name="disposition_id"
+                                            />
+                                            <p>
+                                              <input
+                                                class="wpcf7-form-control wpcf7-submit has-spinner form-btn"
+                                                type="submit"
+                                                value="Apply Now"
+                                                disabled=""
+                                              /><span
+                                                class="wpcf7-spinner"
+                                              ></span>
+                                            </p>
+                                          </div>
+                                        </div>
+                                        <input
+                                          type="hidden"
+                                          id="ct_checkjs_cf7_2050e03ca119580f74cca14cc6e97462"
+                                          name="ct_checkjs_cf7"
+                                          value="322194620"
+                                        />
+                                        <script>
+                                          setTimeout(function () {
+                                            var ct_input_name =
+                                              "ct_checkjs_cf7_2050e03ca119580f74cca14cc6e97462";
+                                            if (
+                                              document.getElementById(
+                                                ct_input_name
+                                              ) !== null
+                                            ) {
+                                              var ct_input_value =
+                                                document.getElementById(
+                                                  ct_input_name
+                                                ).value;
+                                              document.getElementById(
+                                                ct_input_name
+                                              ).value = document
+                                                .getElementById(ct_input_name)
+                                                .value.replace(
+                                                  ct_input_value,
+                                                  "322194620"
+                                                );
+                                            }
+                                          }, 1000);
+                                        </script>
+                                        <label
+                                          class="apbct_special_field"
+                                          id="apbct_label_id2985"
+                                          for="apbct__email_id__wp_contact_form_7_2985"
+                                          >2985</label
+                                        ><input
+                                          id="apbct__email_id__wp_contact_form_7_2985"
+                                          class="apbct_special_field apbct__email_id__wp_contact_form_7"
+                                          autocomplete="off"
+                                          name="apbct__email_id__wp_contact_form_7_2985"
+                                          type="text"
+                                          value="2985"
+                                          size="30"
+                                          apbct_event_id="2985"
+                                          maxlength="200"
+                                        /><input
+                                          id="apbct_event_id_wp_contact_form_7_2985"
+                                          class="apbct_special_field"
+                                          name="apbct_event_id"
+                                          type="hidden"
+                                          value="2985"
+                                        />
+                                        <div
+                                          class="wpcf7-response-output"
+                                          aria-hidden="true"
+                                        ></div>
+                                        <input
+                                          type="hidden"
+                                          id="apbct_visible_fields_0"
+                                          name="apbct_visible_fields"
+                                          value="eyIwIjp7InZpc2libGVfZmllbGRzIjoiZmlyc3RfbmFtZSBsYXN0X25hbWUgZW1haWwgcGhvbmUgY2l0eSBwb3N0YWxfY29kZSBtZXNzYWdlIiwidmlzaWJsZV9maWVsZHNfY291bnQiOjcsImludmlzaWJsZV9maWVsZHMiOiJfd3BjZjcgX3dwY2Y3X3ZlcnNpb24gX3dwY2Y3X2xvY2FsZSBfd3BjZjdfdW5pdF90YWcgX3dwY2Y3X2NvbnRhaW5lcl9wb3N0IF93cGNmN19wb3N0ZWRfZGF0YV9oYXNoIGRpc3Bvc2l0aW9uX2lkIGN0X2NoZWNranNfY2Y3IGFwYmN0X19lbWFpbF9pZF9fd3BfY29udGFjdF9mb3JtXzdfMjk4NSBhcGJjdF9ldmVudF9pZCBjdF9ub19jb29raWVfaGlkZGVuX2ZpZWxkIiwiaW52aXNpYmxlX2ZpZWxkc19jb3VudCI6MTF9fQ=="
+                                        /><input
+                                          name="ct_no_cookie_hidden_field"
+                                          value="_ct_no_cookie_data_eyJhcGJjdF9pZnJhbWVzX3Byb3RlY3RlZCI6W10sImN0X3NjcmVlbl9pbmZvIjoiJTdCJTIyZnVsbFdpZHRoJTIyJTNBMTY2NSUyQyUyMmZ1bGxIZWlnaHQlMjIlM0E0NTA4JTJDJTIydmlzaWJsZVdpZHRoJTIyJTNBMTY2NSUyQyUyMnZpc2libGVIZWlnaHQlMjIlM0E4MzAlN0QiLCJjdF9wb2ludGVyX2RhdGEiOiIlNUIlNUI1MjMlMkMxMDUzJTJDNzYwMSU1RCUyQyU1QjUyMyUyQzEwNTElMkM4MjM2JTVEJTJDJTVCNTI0JTJDMTAzOCUyQzgyNjklNUQlMkMlNUI1MTIlMkM3NzElMkM4NDE5JTVEJTJDJTVCNTExJTJDNzY5JTJDODYxNSU1RCUyQyU1QjcwNCUyQzMwOSUyQzg3MTglNUQlMkMlNUI3MzglMkMyMzclMkM4OTIxJTVEJTJDJTVCODIwJTJDMTYxJTJDOTAxOCU1RCU1RCIsImN0X21vdXNlX21vdmVkIjp0cnVlLCJhcGJjdF9waXhlbF91cmwiOiJodHRwcyUzQSUyRiUyRm1vZGVyYXRlMTEtdjQuY2xlYW50YWxrLm9yZyUyRnBpeGVsJTJGOWNjOWI2ZjhkMDQwYWZmNDYwMjU0NjY2ZDZjYmVmN2IuZ2lmIiwiYXBiY3RfcGFnZV9oaXRzIjo1LCJjdF9jaGVja2pzIjoiMzIyMTk0NjIwIiwiY3RfdGltZXpvbmUiOiI3IiwiY3RfaGFzX3Njcm9sbGVkIjp0cnVlLCJjdF9jb29raWVzX3R5cGUiOiJub25lIiwiYXBiY3RfdmlzaWJsZV9maWVsZHMiOiIwIiwiY3RfaGFzX2tleV91cCI6InRydWUiLCJjdF9wc190aW1lc3RhbXAiOiIxNzQwOTAxNjAyIiwiYXBiY3RfaGVhZGxlc3MiOiJmYWxzZSIsImN0X2ZrcF90aW1lc3RhbXAiOiIxNzQwOTAxNjAzIiwiY3RfaGFzX2lucHV0X2ZvY3VzZWQiOiJ0cnVlIiwiY3RfY2hlY2tlZF9lbWFpbHMiOiIwIiwiYXBiY3Rfc2Vzc2lvbl9pZCI6Imd4andwZWNkIiwiYXBiY3Rfc2Vzc2lvbl9jdXJyZW50X3BhZ2UiOiJodHRwczovL3N0dWRlbnR3b3Jrcy5jb20vcmVjcnV0ZW1lbnQvI2FwcGx5IiwiYXBiY3RfcHJldl9yZWZlcmVyIjoiaHR0cHM6Ly9zdHVkZW50d29ya3MuY29tL3JlY3J1dGVtZW50LyIsInR5cG8iOltdfQ=="
+                                          type="hidden"
+                                          class="apbct_special_field ct_no_cookie_hidden_field"
+                                        />
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="vc_row wpb_row vc_row-fluid fun-last-summer-row padding-100 vc_custom_1691612568580 vc_row-has-fill row-in-grid"
+                >
+                  <div class="container">
+                    <div class="row-in-grid-inner">
+                      <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                          <div class="wpb_wrapper">
+                            <div
+                              class="vc_row wpb_row vc_inner vc_row-fluid fun-last-summer-inner-row vc_row-o-equal-height vc_row-o-content-bottom vc_row-flex row-full-width"
+                            >
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-9"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <div
+                                      class="wpb_text_column wpb_content_element"
+                                    >
+                                      <div class="wpb_wrapper">
+                                        <h2>
+                                          We had fun last summer… Did you?
+                                        </h2>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="wpb_column vc_column_container vc_col-sm-3"
+                              >
+                                <div class="vc_column-inner">
+                                  <div class="wpb_wrapper">
+                                    <a
+                                      href="https://studentworks.com/recrutement/#apply"
+                                      target="_self"
+                                      class="dist-btn"
+                                      >Apply Now!</a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="main-footer">
+          <div class="content-bottom">
+            <div class="container">
+              <div
+                class="widget_text widget widget_custom_html widget-bottom-content"
+              >
+                <div class="textwidget custom-html-widget">
+                  <div class="service-quality-social-row">
+                    <div class="service-quality-social-left-col">
+                      <div class="service-quality-social-left-inner-row">
+                        <div class="service-quality-social-left-inner-row-col">
+                          <p>
+                            Service quality and customer satisfaction are our
+                            guarantees!
+                          </p>
+                        </div>
+                        <div class="service-quality-social-left-inner-row-col">
+                          <a
+                            href="https://studentworks.com/free-estimate/"
+                            class="dist-btn type4"
+                            >Get a free estimate</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="service-quality-social-right-col">
+                      <a
+                        href="https://www.facebook.com/studentworks.program"
+                        target="_blank"
+                        rel="noopener"
+                        ><i class="fab fa-facebook-f"></i></a
+                      ><a
+                        href="https://www.instagram.com/studentworks.program/"
+                        target="_blank"
+                        rel="noopener"
+                        ><i class="fab fa-instagram"></i></a
+                      ><a
+                        href="https://ca.linkedin.com/company/studentworksmanagementprogram"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-linkedin-in"></i></a
+                      ><a
+                        href="https://podcasts.apple.com/ca/podcast/leaders-of-tomorrow-podcast/id1448651718"
+                        target="_blank"
+                        rel="noopener"
+                        ><i class="fas fa-podcast"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-top-bottom">
+            <div class="footer-top footer-col-count-4">
+              <div class="container">
+                <div class="footer-col footer-col-1">
+                  <div class="footer-col-inner">
+                    <div
+                      class="widget footer-widget widget_text footer-column-1-widget"
+                    >
+                      <div class="textwidget">
+                        <a
+                          href="https://studentworks.com/"
+                          style="display: block"
+                          ><img
+                            src="./public/assets/applications/studentsworks-logo.svg"
+                            class="image attachment-full size-full"
+                            alt=""
+                            decoding="async"
+                            style="width: 100%; height: auto"
+                            loading="lazy"
+                        /></a>
+                      </div>
+                    </div>
+                    <div
+                      class="widget_text widget footer-widget widget_custom_html footer-column-1-widget"
+                    >
+                      <div class="textwidget custom-html-widget">
+                        <p>
+                          We are in the business of creating leaders by
+                          recruiting, training and coaching the best students
+                          across Canada. Since 1981, we have created many
+                          successful Canadian business leaders while pleasing
+                          100,000’s of homeowners with quality interior and
+                          exterior house painting services, and providing summer
+                          employment for students as interior and exterior
+                          painters.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-col footer-col-2">
+                  <div class="footer-col-inner">
+                    <div
+                      class="widget footer-widget widget_text footer-column-2-widget"
+                    >
+                      <div class="textwidget"><h5>Student Works</h5></div>
+                    </div>
+                    <div
+                      class="widget footer-widget widget_nav_menu footer-column-2-widget"
+                    >
+                      <div class="menu-footer-menu-left-container">
+                        <ul id="menu-footer-menu-left" class="menu">
+                          <li
+                            id="menu-item-48"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"
+                          >
+                            <a href="https://studentworks.com/homeowners/#about"
+                              >About Us</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-49"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"
+                          >
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://management.studentworks.com/"
+                              >Student Management Program</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-945"
+                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-209 current_page_item menu-item-945"
+                          >
+                            <a
+                              href="https://studentworks.com/recrutement/"
+                              aria-current="page"
+                              >Summer Jobs</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-622"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622"
+                          >
+                            <a
+                              href="https://studentworks.com/local-painting-operators/"
+                              >Local Painting Operators</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-628"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-628"
+                          >
+                            <a href="https://studentworks.com/privacy-policy/"
+                              >Privacy Policy</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-col footer-col-3">
+                  <div class="footer-col-inner">
+                    <div
+                      class="widget footer-widget widget_nav_menu footer-column-3-widget"
+                    >
+                      <h5>Homeowner Services</h5>
+                      <div class="menu-footer-menu-right-container">
+                        <ul id="menu-footer-menu-right" class="menu">
+                          <li
+                            id="menu-item-54"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54"
+                          >
+                            <a href="https://studentworks.com/homeowners/"
+                              >Painting</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-55"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"
+                          >
+                            <a href="https://studentworkswindowcleaning.com/"
+                              >Window Cleaning</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-58"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58"
+                          >
+                            <a href="https://studentworkswindowcleaning.com/"
+                              >Exterior Siding Cleaning</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-57"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57"
+                          >
+                            <a href="https://studentworkswindowcleaning.com/"
+                              >Gutter &amp; Eavestrough Cleaning</a
+                            >
+                          </li>
+                          <li
+                            id="menu-item-1203"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1203"
+                          >
+                            <a href="https://studentworkswindowcleaning.com/"
+                              >Polymeric Sand Installation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-col footer-col-4">
+                  <div class="footer-col-inner">
+                    <div
+                      class="widget footer-widget widget_text footer-column-4-widget"
+                    >
+                      <div class="textwidget">
+                        <div class="footer-btns footer-something-btns">
+                          <a href="tel:+18008031100" class="tel-btn"
+                            ><i class="fas fa-phone-alt"></i>1-800-803-1100</a
+                          >
+                          <a
+                            href="mailto:office@studentworks.com"
+                            class="email-btn"
+                            ><i class="fas fa-envelope"></i>Email us</a
+                          >
+                          <form>
+                            <select
+                              class="service-select something-select select2-hidden-accessible"
+                              style="width: 100%"
+                              tabindex="-1"
+                              aria-hidden="true"
+                              data-select2-id="select2-data-6-ulfu"
+                            >
+                              <option value="quebec">Quebec</option>
+                              <option value="atlantic">Atlantic</option>
+                              <option
+                                value="ontario"
+                                selected=""
+                                data-select2-id="select2-data-8-jass"
+                              >
+                                Ontario
+                              </option>
+                            </select>
+
+                            <input
+                              name="ct_no_cookie_hidden_field"
+                              value="_ct_no_cookie_data_eyJhcGJjdF9pZnJhbWVzX3Byb3RlY3RlZCI6W10sImN0X3NjcmVlbl9pbmZvIjoiJTdCJTIyZnVsbFdpZHRoJTIyJTNBMTY2NSUyQyUyMmZ1bGxIZWlnaHQlMjIlM0E0NTA4JTJDJTIydmlzaWJsZVdpZHRoJTIyJTNBMTY2NSUyQyUyMnZpc2libGVIZWlnaHQlMjIlM0E4MzAlN0QiLCJjdF9wb2ludGVyX2RhdGEiOiIlNUIlNUI1MjMlMkMxMDUzJTJDNzYwMSU1RCUyQyU1QjUyMyUyQzEwNTElMkM4MjM2JTVEJTJDJTVCNTI0JTJDMTAzOCUyQzgyNjklNUQlMkMlNUI1MTIlMkM3NzElMkM4NDE5JTVEJTJDJTVCNTExJTJDNzY5JTJDODYxNSU1RCUyQyU1QjcwNCUyQzMwOSUyQzg3MTglNUQlMkMlNUI3MzglMkMyMzclMkM4OTIxJTVEJTJDJTVCODIwJTJDMTYxJTJDOTAxOCU1RCU1RCIsImN0X21vdXNlX21vdmVkIjp0cnVlLCJhcGJjdF9waXhlbF91cmwiOiJodHRwcyUzQSUyRiUyRm1vZGVyYXRlMTEtdjQuY2xlYW50YWxrLm9yZyUyRnBpeGVsJTJGOWNjOWI2ZjhkMDQwYWZmNDYwMjU0NjY2ZDZjYmVmN2IuZ2lmIiwiYXBiY3RfcGFnZV9oaXRzIjo1LCJjdF9jaGVja2pzIjoiMzIyMTk0NjIwIiwiY3RfdGltZXpvbmUiOiI3IiwiY3RfaGFzX3Njcm9sbGVkIjp0cnVlLCJjdF9jb29raWVzX3R5cGUiOiJub25lIiwiYXBiY3RfdmlzaWJsZV9maWVsZHMiOiIwIiwiY3RfaGFzX2tleV91cCI6InRydWUiLCJjdF9wc190aW1lc3RhbXAiOiIxNzQwOTAxNjAyIiwiYXBiY3RfaGVhZGxlc3MiOiJmYWxzZSIsImN0X2ZrcF90aW1lc3RhbXAiOiIxNzQwOTAxNjAzIiwiY3RfaGFzX2lucHV0X2ZvY3VzZWQiOiJ0cnVlIiwiY3RfY2hlY2tlZF9lbWFpbHMiOiIwIiwiYXBiY3Rfc2Vzc2lvbl9pZCI6Imd4andwZWNkIiwiYXBiY3Rfc2Vzc2lvbl9jdXJyZW50X3BhZ2UiOiJodHRwczovL3N0dWRlbnR3b3Jrcy5jb20vcmVjcnV0ZW1lbnQvI2FwcGx5IiwiYXBiY3RfcHJldl9yZWZlcmVyIjoiaHR0cHM6Ly9zdHVkZW50d29ya3MuY29tL3JlY3J1dGVtZW50LyIsInR5cG8iOltdfQ=="
+                              type="hidden"
+                              class="apbct_special_field ct_no_cookie_hidden_field"
+                            />
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <canvas
+        id="fingerprintingCanvas"
+        width="200"
+        height="40"
+        style="border: 1px solid #000000; display: none"
+      ></canvas>
+    </div>
+    <img
+      alt="Cleantalk Pixel"
+      title="Cleantalk Pixel"
+      id="apbct_pixel"
+      style="display: none"
+      src="./Recrutement - Student Works - Painting_files/9cc9b6f8d040aff460254666d6cbef7b.gif"
+      a4ekmgkpu=""
+    />
+    <!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+
+    <div id="cmplz-manage-consent" data-nosnippet="true">
+      <button
+        class="cmplz-btn cmplz-manage-consent manage-consent-1 cmplz-show"
+      >
+        Manage consent
+      </button>
+    </div>
+    <section class="bafg_popup_preview">
+      <div class="bafg_popup_preview_content">
+        <div class="close" title="Exit Full Screen">╳</div>
+        <div id="bafg_popup_wrap"></div>
+      </div>
+    </section>
+    <div id="loading-image"></div>
+
+    <script type="text/html" id="wpb-modifications">
+      window.wpbCustomElement = 1;
+    </script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/hooks.min.js"
+      id="wp-hooks-js"
+    ></script>
+
+    <!-- <script
+      type="text/javascript"
+      src="./src/scripts/applications/index.js"
+      id="swv-js"
+    ></script> -->
+
+    <!-- <script
+      type="text/javascript"
+      src="./src/scripts/applications/index(1).js"
+      id="contact-form-7-js"
+    ></script> -->
+
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/wpcf7r-fe.js"
+      id="wpcf7-redirect-script-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/jquery.keyframes.js"
+      id="bafg_keyframes-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/bafg-custom-js.js"
+      id="bafg_custom_js-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/bafg-custom-pro.js"
+      id="bafg_custom_pro-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/isotope.pkgd.min.js"
+      id="bafg-isotope-min-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/bafg-isotope-init.js"
+      id="bafg-isotope-init-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/jquery.matchHeight.js"
+      id="matchheight-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/select2.min.js"
+      id="select2-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/remodal.js"
+      id="remodal-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/default.js"
+      id="default-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/options.js"
+      id="options-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/javascript.js"
+      id="javascript-js"
+    ></script>
+    <script
+      defer=""
+      type="text/javascript"
+      src="./src/scripts/applications/complianz.min.js"
+      id="cmplz-cookiebanner-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./src/scripts/applications/js_composer_front.min.js"
+      id="wpb_composer_front_js-js"
+    ></script>
+    <script></script>
+
+    <div class="remodal-overlay remodal-is-closed" style="display: none"></div>
+    <div class="remodal-wrapper remodal-is-closed" style="display: none">
+      <div
+        class="remodal remodal-regions remodal-is-initialized remodal-is-closed"
+        data-remodal-id="regions"
+        tabindex="-1"
+      >
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <div class="remodal-masonry">
+          <div class="remodal-masonry-row">
+            <div
+              class="remodal-masonry-cell"
+              style="
+                background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-window-img.jpg);
+              "
+            ></div>
+            <div class="remodal-masonry-cell">
+              <button value="quebec">
+                <i class="fas fa-map-marker-alt"></i>Quebec<i
+                  class="fas fa-chevron-down"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <div class="remodal-masonry-row">
+            <div
+              class="remodal-masonry-cell"
+              style="
+                background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-since-1981-img.jpg);
+              "
+            ></div>
+            <div class="remodal-masonry-cell">
+              <button value="atlantic">
+                <i class="fas fa-map-marker-alt"></i>Atlantic<i
+                  class="fas fa-chevron-down"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <div class="remodal-masonry-row">
+            <div
+              class="remodal-masonry-cell"
+              style="
+                background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-painting-img.jpg);
+              "
+            ></div>
+            <div class="remodal-masonry-cell">
+              <button value="ontario">
+                <i class="fas fa-map-marker-alt"></i>Ontario<i
+                  class="fas fa-chevron-down"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <ddict-div style="visibility: visible !important"
+    ><template shadowrootmode="open"
+      ><style>
+        *,
+        :before,
+        :after {
+          box-sizing: border-box;
+          border-width: 0;
+          border-style: solid;
+          border-color: #e5e7eb;
+        }
+        :before,
+        :after {
+          --tw-content: "";
+        }
+        html,
+        :host {
+          line-height: 1.5;
+          -webkit-text-size-adjust: 100%;
+          -moz-tab-size: 4;
+          -o-tab-size: 4;
+          tab-size: 4;
+          font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+            "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+          font-feature-settings: normal;
+          font-variation-settings: normal;
+          -webkit-tap-highlight-color: transparent;
+        }
+        body {
+          margin: 0;
+          line-height: inherit;
+        }
+        hr {
+          height: 0;
+          color: inherit;
+          border-top-width: 1px;
+        }
+        abbr:where([title]) {
+          -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        a {
+          color: inherit;
+          text-decoration: inherit;
+        }
+        b,
+        strong {
+          font-weight: bolder;
+        }
+        code,
+        kbd,
+        samp,
+        pre {
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            Liberation Mono, Courier New, monospace;
+          font-feature-settings: normal;
+          font-variation-settings: normal;
+          font-size: 1em;
+        }
+        small {
+          font-size: 80%;
+        }
+        sub,
+        sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
+        sub {
+          bottom: -0.25em;
+        }
+        sup {
+          top: -0.5em;
+        }
+        table {
+          text-indent: 0;
+          border-color: inherit;
+          border-collapse: collapse;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+          font-family: inherit;
+          font-feature-settings: inherit;
+          font-variation-settings: inherit;
+          font-size: 100%;
+          font-weight: inherit;
+          line-height: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          margin: 0;
+          padding: 0;
+        }
+        button,
+        select {
+          text-transform: none;
+        }
+        button,
+        input:where([type="button"]),
+        input:where([type="reset"]),
+        input:where([type="submit"]) {
+          -webkit-appearance: button;
+          background-color: transparent;
+          background-image: none;
+        }
+        :-moz-focusring {
+          outline: auto;
+        }
+        :-moz-ui-invalid {
+          box-shadow: none;
+        }
+        progress {
+          vertical-align: baseline;
+        }
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+          height: auto;
+        }
+        [type="search"] {
+          -webkit-appearance: textfield;
+          outline-offset: -2px;
+        }
+        ::-webkit-search-decoration {
+          -webkit-appearance: none;
+        }
+        ::-webkit-file-upload-button {
+          -webkit-appearance: button;
+          font: inherit;
+        }
+        summary {
+          display: list-item;
+        }
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+          margin: 0;
+        }
+        fieldset {
+          margin: 0;
+          padding: 0;
+        }
+        legend {
+          padding: 0;
+        }
+        ol,
+        ul,
+        menu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        dialog {
+          padding: 0;
+        }
+        textarea {
+          resize: vertical;
+        }
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+          opacity: 1;
+          color: #9ca3af;
+        }
+        input::placeholder,
+        textarea::placeholder {
+          opacity: 1;
+          color: #9ca3af;
+        }
+        button,
+        [role="button"] {
+          cursor: pointer;
+        }
+        :disabled {
+          cursor: default;
+        }
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+          display: block;
+          vertical-align: middle;
+        }
+        img,
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+        [hidden] {
+          display: none;
+        }
+        :root,
+        [data-theme] {
+          background-color: var(--fallback-b1, oklch(var(--b1) / 1));
+          color: var(--fallback-bc, oklch(var(--bc) / 1));
+        }
+        @supports not (color: oklch(0% 0 0)) {
+          :root {
+            color-scheme: light;
+            --fallback-p: #491eff;
+            --fallback-pc: #d4dbff;
+            --fallback-s: #ff41c7;
+            --fallback-sc: #fff9fc;
+            --fallback-a: #00cfbd;
+            --fallback-ac: #00100d;
+            --fallback-n: #2b3440;
+            --fallback-nc: #d7dde4;
+            --fallback-b1: #ffffff;
+            --fallback-b2: #e5e6e6;
+            --fallback-b3: #e5e6e6;
+            --fallback-bc: #1f2937;
+            --fallback-in: #00b3f0;
+            --fallback-inc: #000000;
+            --fallback-su: #00ca92;
+            --fallback-suc: #000000;
+            --fallback-wa: #ffc22d;
+            --fallback-wac: #000000;
+            --fallback-er: #ff6f70;
+            --fallback-erc: #000000;
+          }
+          @media (prefers-color-scheme: dark) {
+            :root {
+              color-scheme: dark;
+              --fallback-p: #7582ff;
+              --fallback-pc: #050617;
+              --fallback-s: #ff71cf;
+              --fallback-sc: #190211;
+              --fallback-a: #00c7b5;
+              --fallback-ac: #000e0c;
+              --fallback-n: #2a323c;
+              --fallback-nc: #a6adbb;
+              --fallback-b1: #1d232a;
+              --fallback-b2: #191e24;
+              --fallback-b3: #15191e;
+              --fallback-bc: #a6adbb;
+              --fallback-in: #00b3f0;
+              --fallback-inc: #000000;
+              --fallback-su: #00ca92;
+              --fallback-suc: #000000;
+              --fallback-wa: #ffc22d;
+              --fallback-wac: #000000;
+              --fallback-er: #ff6f70;
+              --fallback-erc: #000000;
+            }
+          }
+        }
+        html {
+          -webkit-tap-highlight-color: transparent;
+        }
+        * {
+          scrollbar-color: color-mix(in oklch, currentColor 35%, transparent)
+            transparent;
+        }
+        *:hover {
+          scrollbar-color: color-mix(in oklch, currentColor 60%, transparent)
+            transparent;
+        }
+        :root {
+          color-scheme: light;
+          --in: 72.06% 0.191 231.6;
+          --su: 64.8% 0.15 160;
+          --wa: 84.71% 0.199 83.87;
+          --er: 71.76% 0.221 22.18;
+          --pc: 89.824% 0.06192 275.75;
+          --ac: 15.352% 0.0368 183.61;
+          --inc: 0% 0 0;
+          --suc: 0% 0 0;
+          --wac: 0% 0 0;
+          --erc: 0% 0 0;
+          --rounded-box: 1rem;
+          --rounded-btn: 0.5rem;
+          --rounded-badge: 1.9rem;
+          --animation-btn: 0.25s;
+          --animation-input: 0.2s;
+          --btn-focus-scale: 0.95;
+          --border-btn: 1px;
+          --tab-border: 1px;
+          --tab-radius: 0.5rem;
+          --p: 49.12% 0.3096 275.75;
+          --s: 69.71% 0.329 342.55;
+          --sc: 98.71% 0.0106 342.55;
+          --a: 76.76% 0.184 183.61;
+          --n: 32.1785% 0.02476 255.701624;
+          --nc: 89.4994% 0.011585 252.096176;
+          --b1: 100% 0 0;
+          --b2: 96.1151% 0 0;
+          --b3: 92.4169% 0.00108 197.137559;
+          --bc: 27.8078% 0.029596 256.847952;
+        }
+        @media (prefers-color-scheme: dark) {
+          :root {
+            color-scheme: dark;
+            --in: 72.06% 0.191 231.6;
+            --su: 64.8% 0.15 160;
+            --wa: 84.71% 0.199 83.87;
+            --er: 71.76% 0.221 22.18;
+            --pc: 13.138% 0.0392 275.75;
+            --sc: 14.96% 0.052 342.55;
+            --ac: 14.902% 0.0334 183.61;
+            --inc: 0% 0 0;
+            --suc: 0% 0 0;
+            --wac: 0% 0 0;
+            --erc: 0% 0 0;
+            --rounded-box: 1rem;
+            --rounded-btn: 0.5rem;
+            --rounded-badge: 1.9rem;
+            --animation-btn: 0.25s;
+            --animation-input: 0.2s;
+            --btn-focus-scale: 0.95;
+            --border-btn: 1px;
+            --tab-border: 1px;
+            --tab-radius: 0.5rem;
+            --p: 65.69% 0.196 275.75;
+            --s: 74.8% 0.26 342.55;
+            --a: 74.51% 0.167 183.61;
+            --n: 31.3815% 0.021108 254.139175;
+            --nc: 74.6477% 0.0216 264.435964;
+            --b1: 25.3267% 0.015896 252.417568;
+            --b2: 23.2607% 0.013807 253.100675;
+            --b3: 21.1484% 0.01165 254.087939;
+            --bc: 74.6477% 0.0216 264.435964;
+          }
+        }
+        [data-theme="light"] {
+          color-scheme: light;
+          --in: 72.06% 0.191 231.6;
+          --su: 64.8% 0.15 160;
+          --wa: 84.71% 0.199 83.87;
+          --er: 71.76% 0.221 22.18;
+          --pc: 89.824% 0.06192 275.75;
+          --ac: 15.352% 0.0368 183.61;
+          --inc: 0% 0 0;
+          --suc: 0% 0 0;
+          --wac: 0% 0 0;
+          --erc: 0% 0 0;
+          --rounded-box: 1rem;
+          --rounded-btn: 0.5rem;
+          --rounded-badge: 1.9rem;
+          --animation-btn: 0.25s;
+          --animation-input: 0.2s;
+          --btn-focus-scale: 0.95;
+          --border-btn: 1px;
+          --tab-border: 1px;
+          --tab-radius: 0.5rem;
+          --p: 49.12% 0.3096 275.75;
+          --s: 69.71% 0.329 342.55;
+          --sc: 98.71% 0.0106 342.55;
+          --a: 76.76% 0.184 183.61;
+          --n: 32.1785% 0.02476 255.701624;
+          --nc: 89.4994% 0.011585 252.096176;
+          --b1: 100% 0 0;
+          --b2: 96.1151% 0 0;
+          --b3: 92.4169% 0.00108 197.137559;
+          --bc: 27.8078% 0.029596 256.847952;
+        }
+        [data-theme="dark"] {
+          color-scheme: dark;
+          --in: 72.06% 0.191 231.6;
+          --su: 64.8% 0.15 160;
+          --wa: 84.71% 0.199 83.87;
+          --er: 71.76% 0.221 22.18;
+          --pc: 13.138% 0.0392 275.75;
+          --sc: 14.96% 0.052 342.55;
+          --ac: 14.902% 0.0334 183.61;
+          --inc: 0% 0 0;
+          --suc: 0% 0 0;
+          --wac: 0% 0 0;
+          --erc: 0% 0 0;
+          --rounded-box: 1rem;
+          --rounded-btn: 0.5rem;
+          --rounded-badge: 1.9rem;
+          --animation-btn: 0.25s;
+          --animation-input: 0.2s;
+          --btn-focus-scale: 0.95;
+          --border-btn: 1px;
+          --tab-border: 1px;
+          --tab-radius: 0.5rem;
+          --p: 65.69% 0.196 275.75;
+          --s: 74.8% 0.26 342.55;
+          --a: 74.51% 0.167 183.61;
+          --n: 31.3815% 0.021108 254.139175;
+          --nc: 74.6477% 0.0216 264.435964;
+          --b1: 25.3267% 0.015896 252.417568;
+          --b2: 23.2607% 0.013807 253.100675;
+          --b3: 21.1484% 0.01165 254.087939;
+          --bc: 74.6477% 0.0216 264.435964;
+        }
+        *,
+        :before,
+        :after {
+          --tw-border-spacing-x: 0;
+          --tw-border-spacing-y: 0;
+          --tw-translate-x: 0;
+          --tw-translate-y: 0;
+          --tw-rotate: 0;
+          --tw-skew-x: 0;
+          --tw-skew-y: 0;
+          --tw-scale-x: 1;
+          --tw-scale-y: 1;
+          --tw-pan-x: ;
+          --tw-pan-y: ;
+          --tw-pinch-zoom: ;
+          --tw-scroll-snap-strictness: proximity;
+          --tw-gradient-from-position: ;
+          --tw-gradient-via-position: ;
+          --tw-gradient-to-position: ;
+          --tw-ordinal: ;
+          --tw-slashed-zero: ;
+          --tw-numeric-figure: ;
+          --tw-numeric-spacing: ;
+          --tw-numeric-fraction: ;
+          --tw-ring-inset: ;
+          --tw-ring-offset-width: 0px;
+          --tw-ring-offset-color: #fff;
+          --tw-ring-color: rgb(59 130 246 / 0.5);
+          --tw-ring-offset-shadow: 0 0 #0000;
+          --tw-ring-shadow: 0 0 #0000;
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-colored: 0 0 #0000;
+          --tw-blur: ;
+          --tw-brightness: ;
+          --tw-contrast: ;
+          --tw-grayscale: ;
+          --tw-hue-rotate: ;
+          --tw-invert: ;
+          --tw-saturate: ;
+          --tw-sepia: ;
+          --tw-drop-shadow: ;
+          --tw-backdrop-blur: ;
+          --tw-backdrop-brightness: ;
+          --tw-backdrop-contrast: ;
+          --tw-backdrop-grayscale: ;
+          --tw-backdrop-hue-rotate: ;
+          --tw-backdrop-invert: ;
+          --tw-backdrop-opacity: ;
+          --tw-backdrop-saturate: ;
+          --tw-backdrop-sepia: ;
+          --tw-contain-size: ;
+          --tw-contain-layout: ;
+          --tw-contain-paint: ;
+          --tw-contain-style: ;
+        }
+        ::backdrop {
+          --tw-border-spacing-x: 0;
+          --tw-border-spacing-y: 0;
+          --tw-translate-x: 0;
+          --tw-translate-y: 0;
+          --tw-rotate: 0;
+          --tw-skew-x: 0;
+          --tw-skew-y: 0;
+          --tw-scale-x: 1;
+          --tw-scale-y: 1;
+          --tw-pan-x: ;
+          --tw-pan-y: ;
+          --tw-pinch-zoom: ;
+          --tw-scroll-snap-strictness: proximity;
+          --tw-gradient-from-position: ;
+          --tw-gradient-via-position: ;
+          --tw-gradient-to-position: ;
+          --tw-ordinal: ;
+          --tw-slashed-zero: ;
+          --tw-numeric-figure: ;
+          --tw-numeric-spacing: ;
+          --tw-numeric-fraction: ;
+          --tw-ring-inset: ;
+          --tw-ring-offset-width: 0px;
+          --tw-ring-offset-color: #fff;
+          --tw-ring-color: rgb(59 130 246 / 0.5);
+          --tw-ring-offset-shadow: 0 0 #0000;
+          --tw-ring-shadow: 0 0 #0000;
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-colored: 0 0 #0000;
+          --tw-blur: ;
+          --tw-brightness: ;
+          --tw-contrast: ;
+          --tw-grayscale: ;
+          --tw-hue-rotate: ;
+          --tw-invert: ;
+          --tw-saturate: ;
+          --tw-sepia: ;
+          --tw-drop-shadow: ;
+          --tw-backdrop-blur: ;
+          --tw-backdrop-brightness: ;
+          --tw-backdrop-contrast: ;
+          --tw-backdrop-grayscale: ;
+          --tw-backdrop-hue-rotate: ;
+          --tw-backdrop-invert: ;
+          --tw-backdrop-opacity: ;
+          --tw-backdrop-saturate: ;
+          --tw-backdrop-sepia: ;
+          --tw-contain-size: ;
+          --tw-contain-layout: ;
+          --tw-contain-paint: ;
+          --tw-contain-style: ;
+        }
+        .avatar.placeholder > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (hover: hover) {
+          .link-hover:hover {
+            text-decoration-line: underline;
+          }
+          .label a:hover {
+            --tw-text-opacity: 1;
+            color: var(
+              --fallback-bc,
+              oklch(var(--bc) / var(--tw-text-opacity))
+            );
+          }
+        }
+        .btn {
+          display: inline-flex;
+          height: 3rem;
+          min-height: 3rem;
+          flex-shrink: 0;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          border-radius: var(--rounded-btn, 0.5rem);
+          border-color: transparent;
+          border-color: oklch(
+            var(--btn-color, var(--b2)) / var(--tw-border-opacity)
+          );
+          padding-left: 1rem;
+          padding-right: 1rem;
+          text-align: center;
+          font-size: 0.875rem;
+          line-height: 1em;
+          gap: 0.5rem;
+          font-weight: 600;
+          text-decoration-line: none;
+          transition-duration: 0.2s;
+          transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          border-width: var(--border-btn, 1px);
+          transition-property: color, background-color, border-color, opacity,
+            box-shadow, transform;
+          --tw-text-opacity: 1;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+          --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+          --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          outline-color: var(--fallback-bc, oklch(var(--bc) / 1));
+          background-color: oklch(
+            var(--btn-color, var(--b2)) / var(--tw-bg-opacity)
+          );
+          --tw-bg-opacity: 1;
+          --tw-border-opacity: 1;
+        }
+        .btn-disabled,
+        .btn[disabled],
+        .btn:disabled {
+          pointer-events: none;
+        }
+        .btn-circle {
+          height: 3rem;
+          width: 3rem;
+          border-radius: 9999px;
+          padding: 0;
+        }
+        :where(.btn:is(input[type="checkbox"])),
+        :where(.btn:is(input[type="radio"])) {
+          width: auto;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .btn:is(input[type="checkbox"]):after,
+        .btn:is(input[type="radio"]):after {
+          --tw-content: attr(aria-label);
+          content: var(--tw-content);
+        }
+        .card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          border-radius: var(--rounded-box, 1rem);
+        }
+        .card:focus {
+          outline: 2px solid transparent;
+          outline-offset: 2px;
+        }
+        .card-body {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+          padding: var(--padding-card, 2rem);
+          gap: 0.5rem;
+        }
+        .card-body :where(p) {
+          flex-grow: 1;
+        }
+        .card figure {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .card.image-full {
+          display: grid;
+        }
+        .card.image-full:before {
+          position: relative;
+          content: "";
+          z-index: 10;
+          border-radius: var(--rounded-box, 1rem);
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-n,
+            oklch(var(--n) / var(--tw-bg-opacity))
+          );
+          opacity: 0.75;
+        }
+        .card.image-full:before,
+        .card.image-full > * {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .card.image-full > figure img {
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+        .card.image-full > .card-body {
+          position: relative;
+          z-index: 20;
+          --tw-text-opacity: 1;
+          color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
+        }
+        @media (hover: hover) {
+          .btm-nav > *.\!disabled:hover {
+            pointer-events: none !important;
+            --tw-border-opacity: 0 !important;
+            background-color: var(
+              --fallback-n,
+              oklch(var(--n) / var(--tw-bg-opacity))
+            ) !important;
+            --tw-bg-opacity: 0.1 !important;
+            color: var(
+              --fallback-bc,
+              oklch(var(--bc) / var(--tw-text-opacity))
+            ) !important;
+            --tw-text-opacity: 0.2 !important;
+          }
+          .btm-nav > *.disabled:hover,
+          .btm-nav > *[disabled]:hover {
+            pointer-events: none;
+            --tw-border-opacity: 0;
+            background-color: var(
+              --fallback-n,
+              oklch(var(--n) / var(--tw-bg-opacity))
+            );
+            --tw-bg-opacity: 0.1;
+            color: var(
+              --fallback-bc,
+              oklch(var(--bc) / var(--tw-text-opacity))
+            );
+            --tw-text-opacity: 0.2;
+          }
+          .btn:hover {
+            --tw-border-opacity: 1;
+            border-color: var(
+              --fallback-b3,
+              oklch(var(--b3) / var(--tw-border-opacity))
+            );
+            --tw-bg-opacity: 1;
+            background-color: var(
+              --fallback-b3,
+              oklch(var(--b3) / var(--tw-bg-opacity))
+            );
+          }
+          @supports (color: color-mix(in oklab, black, black)) {
+            .btn:hover {
+              background-color: color-mix(
+                in oklab,
+                oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1)) 90%,
+                black
+              );
+              border-color: color-mix(
+                in oklab,
+                oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1))
+                  90%,
+                black
+              );
+            }
+          }
+          @supports not (color: oklch(0% 0 0)) {
+            .btn:hover {
+              background-color: var(--btn-color, var(--fallback-b2));
+              border-color: var(--btn-color, var(--fallback-b2));
+            }
+          }
+          .btn.glass:hover {
+            --glass-opacity: 25%;
+            --glass-border-opacity: 15%;
+          }
+          .btn-ghost:hover {
+            border-color: transparent;
+          }
+          @supports (color: oklch(0% 0 0)) {
+            .btn-ghost:hover {
+              background-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+            }
+          }
+          .btn-outline.btn-primary:hover {
+            --tw-text-opacity: 1;
+            color: var(
+              --fallback-pc,
+              oklch(var(--pc) / var(--tw-text-opacity))
+            );
+          }
+          @supports (color: color-mix(in oklab, black, black)) {
+            .btn-outline.btn-primary:hover {
+              background-color: color-mix(
+                in oklab,
+                var(--fallback-p, oklch(var(--p) / 1)) 90%,
+                black
+              );
+              border-color: color-mix(
+                in oklab,
+                var(--fallback-p, oklch(var(--p) / 1)) 90%,
+                black
+              );
+            }
+          }
+          .btn-disabled:hover,
+          .btn[disabled]:hover,
+          .btn:disabled:hover {
+            --tw-border-opacity: 0;
+            background-color: var(
+              --fallback-n,
+              oklch(var(--n) / var(--tw-bg-opacity))
+            );
+            --tw-bg-opacity: 0.2;
+            color: var(
+              --fallback-bc,
+              oklch(var(--bc) / var(--tw-text-opacity))
+            );
+            --tw-text-opacity: 0.2;
+          }
+          @supports (color: color-mix(in oklab, black, black)) {
+            .btn:is(input[type="checkbox"]:checked):hover,
+            .btn:is(input[type="radio"]:checked):hover {
+              background-color: color-mix(
+                in oklab,
+                var(--fallback-p, oklch(var(--p) / 1)) 90%,
+                black
+              );
+              border-color: color-mix(
+                in oklab,
+                var(--fallback-p, oklch(var(--p) / 1)) 90%,
+                black
+              );
+            }
+          }
+        }
+        .form-control {
+          display: flex;
+          flex-direction: column;
+        }
+        .label {
+          display: flex;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem 0.25rem;
+        }
+        .hero {
+          display: grid;
+          width: 100%;
+          place-items: center;
+          background-size: cover;
+          background-position: center;
+        }
+        .hero > * {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .hero-content {
+          z-index: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-width: 80rem;
+          gap: 1rem;
+          padding: 1rem;
+        }
+        .input {
+          flex-shrink: 1;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          height: 3rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          font-size: 1rem;
+          line-height: 2;
+          line-height: 1.5rem;
+          border-radius: var(--rounded-btn, 0.5rem);
+          border-width: 1px;
+          border-color: transparent;
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-b1,
+            oklch(var(--b1) / var(--tw-bg-opacity))
+          );
+        }
+        .input[type="number"]::-webkit-inner-spin-button,
+        .input-md[type="number"]::-webkit-inner-spin-button {
+          margin-top: -1rem;
+          margin-bottom: -1rem;
+          margin-inline-end: -1rem;
+        }
+        .join {
+          display: inline-flex;
+          align-items: stretch;
+          border-radius: var(--rounded-btn, 0.5rem);
+        }
+        .join :where(.join-item) {
+          border-start-end-radius: 0;
+          border-end-end-radius: 0;
+          border-end-start-radius: 0;
+          border-start-start-radius: 0;
+        }
+        .join .join-item:not(:first-child):not(:last-child),
+        .join *:not(:first-child):not(:last-child) .join-item {
+          border-start-end-radius: 0;
+          border-end-end-radius: 0;
+          border-end-start-radius: 0;
+          border-start-start-radius: 0;
+        }
+        .join .join-item:first-child:not(:last-child),
+        .join *:first-child:not(:last-child) .join-item {
+          border-start-end-radius: 0;
+          border-end-end-radius: 0;
+        }
+        .join .dropdown .join-item:first-child:not(:last-child),
+        .join *:first-child:not(:last-child) .dropdown .join-item {
+          border-start-end-radius: inherit;
+          border-end-end-radius: inherit;
+        }
+        .join :where(.join-item:first-child:not(:last-child)),
+        .join :where(*:first-child:not(:last-child) .join-item) {
+          border-end-start-radius: inherit;
+          border-start-start-radius: inherit;
+        }
+        .join .join-item:last-child:not(:first-child),
+        .join *:last-child:not(:first-child) .join-item {
+          border-end-start-radius: 0;
+          border-start-start-radius: 0;
+        }
+        .join :where(.join-item:last-child:not(:first-child)),
+        .join :where(*:last-child:not(:first-child) .join-item) {
+          border-start-end-radius: inherit;
+          border-end-end-radius: inherit;
+        }
+        @supports not selector(:has(*)) {
+          :where(.join *) {
+            border-radius: inherit;
+          }
+        }
+        @supports selector(:has(*)) {
+          :where(.join *:has(.join-item)) {
+            border-radius: inherit;
+          }
+        }
+        .link {
+          cursor: pointer;
+          text-decoration-line: underline;
+        }
+        .link-hover {
+          text-decoration-line: none;
+        }
+        .mask {
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        }
+        .menu li.\!disabled {
+          cursor: not-allowed !important;
+          -webkit-user-select: none !important;
+          -moz-user-select: none !important;
+          user-select: none !important;
+          color: var(--fallback-bc, oklch(var(--bc) / 0.3)) !important;
+        }
+        .menu li.disabled {
+          cursor: not-allowed;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+          color: var(--fallback-bc, oklch(var(--bc) / 0.3));
+        }
+        .textarea {
+          min-height: 3rem;
+          flex-shrink: 1;
+          padding: 0.5rem 1rem;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          line-height: 2;
+          border-radius: var(--rounded-btn, 0.5rem);
+          border-width: 1px;
+          border-color: transparent;
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-b1,
+            oklch(var(--b1) / var(--tw-bg-opacity))
+          );
+        }
+        .toggle {
+          flex-shrink: 0;
+          --tglbg: var(--fallback-b1, oklch(var(--b1) / 1));
+          --handleoffset: 1.5rem;
+          --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+          --togglehandleborder: 0 0;
+          height: 1.5rem;
+          width: 3rem;
+          cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-radius: var(--rounded-badge, 1.9rem);
+          border-width: 1px;
+          border-color: currentColor;
+          background-color: currentColor;
+          color: var(--fallback-bc, oklch(var(--bc) / 0.5));
+          transition: background,
+            box-shadow var(--animation-input, 0.2s) ease-out;
+          box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,
+            0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
+        }
+        .btm-nav > *.\!disabled {
+          pointer-events: none !important;
+          --tw-border-opacity: 0 !important;
+          background-color: var(
+            --fallback-n,
+            oklch(var(--n) / var(--tw-bg-opacity))
+          ) !important;
+          --tw-bg-opacity: 0.1 !important;
+          color: var(
+            --fallback-bc,
+            oklch(var(--bc) / var(--tw-text-opacity))
+          ) !important;
+          --tw-text-opacity: 0.2 !important;
+        }
+        .btm-nav > *.disabled,
+        .btm-nav > *[disabled] {
+          pointer-events: none;
+          --tw-border-opacity: 0;
+          background-color: var(
+            --fallback-n,
+            oklch(var(--n) / var(--tw-bg-opacity))
+          );
+          --tw-bg-opacity: 0.1;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+          --tw-text-opacity: 0.2;
+        }
+        .btm-nav > * .label {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        @media (prefers-reduced-motion: no-preference) {
+          .btn {
+            animation: button-pop var(--animation-btn, 0.25s) ease-out;
+          }
+        }
+        .btn:active:hover,
+        .btn:active:focus {
+          animation: button-pop 0s ease-out;
+          transform: scale(var(--btn-focus-scale, 0.97));
+        }
+        @supports not (color: oklch(0% 0 0)) {
+          .btn {
+            background-color: var(--btn-color, var(--fallback-b2));
+            border-color: var(--btn-color, var(--fallback-b2));
+          }
+          .btn-primary {
+            --btn-color: var(--fallback-p);
+          }
+        }
+        @supports (color: color-mix(in oklab, black, black)) {
+          .btn-outline.btn-primary.btn-active {
+            background-color: color-mix(
+              in oklab,
+              var(--fallback-p, oklch(var(--p) / 1)) 90%,
+              black
+            );
+            border-color: color-mix(
+              in oklab,
+              var(--fallback-p, oklch(var(--p) / 1)) 90%,
+              black
+            );
+          }
+        }
+        .btn:focus-visible {
+          outline-style: solid;
+          outline-width: 2px;
+          outline-offset: 2px;
+        }
+        .btn-primary {
+          --tw-text-opacity: 1;
+          color: var(--fallback-pc, oklch(var(--pc) / var(--tw-text-opacity)));
+          outline-color: var(--fallback-p, oklch(var(--p) / 1));
+        }
+        @supports (color: oklch(0% 0 0)) {
+          .btn-primary {
+            --btn-color: var(--p);
+          }
+        }
+        .btn.glass {
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-colored: 0 0 #0000;
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          outline-color: currentColor;
+        }
+        .btn.glass.btn-active {
+          --glass-opacity: 25%;
+          --glass-border-opacity: 15%;
+        }
+        .btn-ghost {
+          border-width: 1px;
+          border-color: transparent;
+          background-color: transparent;
+          color: currentColor;
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-colored: 0 0 #0000;
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          outline-color: currentColor;
+        }
+        .btn-ghost.btn-active {
+          border-color: transparent;
+          background-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+        }
+        .btn-outline.btn-primary {
+          --tw-text-opacity: 1;
+          color: var(--fallback-p, oklch(var(--p) / var(--tw-text-opacity)));
+        }
+        .btn-outline.btn-primary.btn-active {
+          --tw-text-opacity: 1;
+          color: var(--fallback-pc, oklch(var(--pc) / var(--tw-text-opacity)));
+        }
+        .btn.btn-disabled,
+        .btn[disabled],
+        .btn:disabled {
+          --tw-border-opacity: 0;
+          background-color: var(
+            --fallback-n,
+            oklch(var(--n) / var(--tw-bg-opacity))
+          );
+          --tw-bg-opacity: 0.2;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+          --tw-text-opacity: 0.2;
+        }
+        .btn:is(input[type="checkbox"]:checked),
+        .btn:is(input[type="radio"]:checked) {
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-p,
+            oklch(var(--p) / var(--tw-border-opacity))
+          );
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-p,
+            oklch(var(--p) / var(--tw-bg-opacity))
+          );
+          --tw-text-opacity: 1;
+          color: var(--fallback-pc, oklch(var(--pc) / var(--tw-text-opacity)));
+        }
+        .btn:is(input[type="checkbox"]:checked):focus-visible,
+        .btn:is(input[type="radio"]:checked):focus-visible {
+          outline-color: var(--fallback-p, oklch(var(--p) / 1));
+        }
+        @keyframes button-pop {
+          0% {
+            transform: scale(var(--btn-focus-scale, 0.98));
+          }
+          40% {
+            transform: scale(1.02);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+        .card :where(figure:first-child) {
+          overflow: hidden;
+          border-start-start-radius: inherit;
+          border-start-end-radius: inherit;
+          border-end-start-radius: unset;
+          border-end-end-radius: unset;
+        }
+        .card :where(figure:last-child) {
+          overflow: hidden;
+          border-start-start-radius: unset;
+          border-start-end-radius: unset;
+          border-end-start-radius: inherit;
+          border-end-end-radius: inherit;
+        }
+        .card:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+        .card.bordered {
+          border-width: 1px;
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-b2,
+            oklch(var(--b2) / var(--tw-border-opacity))
+          );
+        }
+        .card.compact .card-body {
+          padding: 1rem;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+        .card.image-full :where(figure) {
+          overflow: hidden;
+          border-radius: inherit;
+        }
+        @keyframes checkmark {
+          0% {
+            background-position-y: 5px;
+          }
+          50% {
+            background-position-y: -2px;
+          }
+          to {
+            background-position-y: 0;
+          }
+        }
+        .label-text {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          --tw-text-opacity: 1;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+        }
+        .label-text-alt {
+          font-size: 0.75rem;
+          line-height: 1rem;
+          --tw-text-opacity: 1;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+        }
+        .input input {
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-p,
+            oklch(var(--p) / var(--tw-bg-opacity))
+          );
+          background-color: transparent;
+        }
+        .input input:focus {
+          outline: 2px solid transparent;
+          outline-offset: 2px;
+        }
+        .input[list]::-webkit-calendar-picker-indicator {
+          line-height: 1em;
+        }
+        .input-bordered {
+          border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+        }
+        .input:focus,
+        .input:focus-within {
+          box-shadow: none;
+          border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+          outline-style: solid;
+          outline-width: 2px;
+          outline-offset: 2px;
+          outline-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+        }
+        .input:has(> input[disabled]),
+        .input-disabled,
+        .input:disabled,
+        .input[disabled] {
+          cursor: not-allowed;
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-b2,
+            oklch(var(--b2) / var(--tw-border-opacity))
+          );
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-b2,
+            oklch(var(--b2) / var(--tw-bg-opacity))
+          );
+          color: var(--fallback-bc, oklch(var(--bc) / 0.4));
+        }
+        .input:has(> input[disabled])::-moz-placeholder,
+        .input-disabled::-moz-placeholder,
+        .input:disabled::-moz-placeholder,
+        .input[disabled]::-moz-placeholder {
+          color: var(
+            --fallback-bc,
+            oklch(var(--bc) / var(--tw-placeholder-opacity))
+          );
+          --tw-placeholder-opacity: 0.2;
+        }
+        .input:has(> input[disabled])::placeholder,
+        .input-disabled::placeholder,
+        .input:disabled::placeholder,
+        .input[disabled]::placeholder {
+          color: var(
+            --fallback-bc,
+            oklch(var(--bc) / var(--tw-placeholder-opacity))
+          );
+          --tw-placeholder-opacity: 0.2;
+        }
+        .input:has(> input[disabled]) > input[disabled] {
+          cursor: not-allowed;
+        }
+        .input::-webkit-date-and-time-value {
+          text-align: inherit;
+        }
+        .join > :where(*:not(:first-child)) {
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-inline-start: -1px;
+        }
+        .join > :where(*:not(:first-child)):is(.btn) {
+          margin-inline-start: calc(var(--border-btn) * -1);
+        }
+        .link:focus {
+          outline: 2px solid transparent;
+          outline-offset: 2px;
+        }
+        .link:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+        .mockup-phone .display {
+          overflow: hidden;
+          border-radius: 40px;
+          margin-top: -25px;
+        }
+        .mockup-browser .mockup-browser-toolbar .input {
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          height: 1.75rem;
+          width: 24rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-b2,
+            oklch(var(--b2) / var(--tw-bg-opacity))
+          );
+          padding-left: 2rem;
+          direction: ltr;
+        }
+        .mockup-browser .mockup-browser-toolbar .input:before {
+          content: "";
+          position: absolute;
+          left: 0.5rem;
+          top: 50%;
+          aspect-ratio: 1 / 1;
+          height: 0.75rem;
+          --tw-translate-y: -50%;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+            rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+            skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+            scaleY(var(--tw-scale-y));
+          border-radius: 9999px;
+          border-width: 2px;
+          border-color: currentColor;
+          opacity: 0.6;
+        }
+        .mockup-browser .mockup-browser-toolbar .input:after {
+          content: "";
+          position: absolute;
+          left: 1.25rem;
+          top: 50%;
+          height: 0.5rem;
+          --tw-translate-y: 25%;
+          --tw-rotate: -45deg;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+            rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+            skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+            scaleY(var(--tw-scale-y));
+          border-radius: 9999px;
+          border-width: 1px;
+          border-color: currentColor;
+          opacity: 0.6;
+        }
+        @keyframes modal-pop {
+          0% {
+            opacity: 0;
+          }
+        }
+        @keyframes progress-loading {
+          50% {
+            background-position-x: -115%;
+          }
+        }
+        @keyframes radiomark {
+          0% {
+            box-shadow: 0 0 0 12px var(--fallback-b1, oklch(var(--b1) / 1))
+                inset,
+              0 0 0 12px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+          }
+          50% {
+            box-shadow: 0 0 0 3px var(--fallback-b1, oklch(var(--b1) / 1)) inset,
+              0 0 0 3px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+          }
+          to {
+            box-shadow: 0 0 0 4px var(--fallback-b1, oklch(var(--b1) / 1)) inset,
+              0 0 0 4px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+          }
+        }
+        @keyframes rating-pop {
+          0% {
+            transform: translateY(-0.125em);
+          }
+          40% {
+            transform: translateY(-0.125em);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        @keyframes skeleton {
+          0% {
+            background-position: 150%;
+          }
+          to {
+            background-position: -50%;
+          }
+        }
+        .textarea:focus {
+          box-shadow: none;
+          border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+          outline-style: solid;
+          outline-width: 2px;
+          outline-offset: 2px;
+          outline-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+        }
+        .textarea-primary {
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-p,
+            oklch(var(--p) / var(--tw-border-opacity))
+          );
+        }
+        .textarea-primary:focus {
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-p,
+            oklch(var(--p) / var(--tw-border-opacity))
+          );
+          outline-color: var(--fallback-p, oklch(var(--p) / 1));
+        }
+        .textarea-disabled,
+        .textarea:disabled,
+        .textarea[disabled] {
+          cursor: not-allowed;
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-b2,
+            oklch(var(--b2) / var(--tw-border-opacity))
+          );
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-b2,
+            oklch(var(--b2) / var(--tw-bg-opacity))
+          );
+          color: var(--fallback-bc, oklch(var(--bc) / 0.4));
+        }
+        .textarea-disabled::-moz-placeholder,
+        .textarea:disabled::-moz-placeholder,
+        .textarea[disabled]::-moz-placeholder {
+          color: var(
+            --fallback-bc,
+            oklch(var(--bc) / var(--tw-placeholder-opacity))
+          );
+          --tw-placeholder-opacity: 0.2;
+        }
+        .textarea-disabled::placeholder,
+        .textarea:disabled::placeholder,
+        .textarea[disabled]::placeholder {
+          color: var(
+            --fallback-bc,
+            oklch(var(--bc) / var(--tw-placeholder-opacity))
+          );
+          --tw-placeholder-opacity: 0.2;
+        }
+        @keyframes toast-pop {
+          0% {
+            transform: scale(0.9);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        [dir="rtl"] .toggle {
+          --handleoffsetcalculator: calc(var(--handleoffset) * 1);
+        }
+        .toggle:focus-visible {
+          outline-style: solid;
+          outline-width: 2px;
+          outline-offset: 2px;
+          outline-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+        }
+        .toggle:hover {
+          background-color: currentColor;
+        }
+        .toggle:checked,
+        .toggle[aria-checked="true"] {
+          background-image: none;
+          --handleoffsetcalculator: var(--handleoffset);
+          --tw-text-opacity: 1;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+        }
+        [dir="rtl"] .toggle:checked,
+        [dir="rtl"] .toggle[aria-checked="true"] {
+          --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+        }
+        .toggle:indeterminate {
+          --tw-text-opacity: 1;
+          color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+          box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
+            calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
+            0 0 0 2px var(--tglbg) inset;
+        }
+        [dir="rtl"] .toggle:indeterminate {
+          box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
+            calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
+            0 0 0 2px var(--tglbg) inset;
+        }
+        .toggle:disabled {
+          cursor: not-allowed;
+          --tw-border-opacity: 1;
+          border-color: var(
+            --fallback-bc,
+            oklch(var(--bc) / var(--tw-border-opacity))
+          );
+          background-color: transparent;
+          opacity: 0.3;
+          --togglehandleborder: 0 0 0 3px
+              var(--fallback-bc, oklch(var(--bc) / 1)) inset,
+            var(--handleoffsetcalculator) 0 0 3px
+              var(--fallback-bc, oklch(var(--bc) / 1)) inset;
+        }
+        .btn-xs {
+          height: 1.5rem;
+          min-height: 1.5rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          font-size: 0.75rem;
+        }
+        .btn-square:where(.btn-xs) {
+          height: 1.5rem;
+          width: 1.5rem;
+          padding: 0;
+        }
+        .btn-circle:where(.btn-xs) {
+          height: 1.5rem;
+          width: 1.5rem;
+          border-radius: 9999px;
+          padding: 0;
+        }
+        .btn-circle:where(.btn-sm) {
+          height: 2rem;
+          width: 2rem;
+          border-radius: 9999px;
+          padding: 0;
+        }
+        .btn-circle:where(.btn-md) {
+          height: 3rem;
+          width: 3rem;
+          border-radius: 9999px;
+          padding: 0;
+        }
+        .btn-circle:where(.btn-lg) {
+          height: 4rem;
+          width: 4rem;
+          border-radius: 9999px;
+          padding: 0;
+        }
+        .join.join-vertical {
+          flex-direction: column;
+        }
+        .join.join-vertical .join-item:first-child:not(:last-child),
+        .join.join-vertical *:first-child:not(:last-child) .join-item {
+          border-end-start-radius: 0;
+          border-end-end-radius: 0;
+          border-start-start-radius: inherit;
+          border-start-end-radius: inherit;
+        }
+        .join.join-vertical .join-item:last-child:not(:first-child),
+        .join.join-vertical *:last-child:not(:first-child) .join-item {
+          border-start-start-radius: 0;
+          border-start-end-radius: 0;
+          border-end-start-radius: inherit;
+          border-end-end-radius: inherit;
+        }
+        .join.join-horizontal {
+          flex-direction: row;
+        }
+        .join.join-horizontal .join-item:first-child:not(:last-child),
+        .join.join-horizontal *:first-child:not(:last-child) .join-item {
+          border-end-end-radius: 0;
+          border-start-end-radius: 0;
+          border-end-start-radius: inherit;
+          border-start-start-radius: inherit;
+        }
+        .join.join-horizontal .join-item:last-child:not(:first-child),
+        .join.join-horizontal *:last-child:not(:first-child) .join-item {
+          border-end-start-radius: 0;
+          border-start-start-radius: 0;
+          border-end-end-radius: inherit;
+          border-start-end-radius: inherit;
+        }
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          --tooltip-offset: calc(100% + 1px + var(--tooltip-tail, 0px));
+        }
+        .tooltip:before {
+          position: absolute;
+          pointer-events: none;
+          z-index: 1;
+          content: var(--tw-content);
+          --tw-content: attr(data-tip);
+        }
+        .tooltip:before,
+        .tooltip-top:before {
+          transform: translate(-50%);
+          top: auto;
+          left: 50%;
+          right: auto;
+          bottom: var(--tooltip-offset);
+        }
+        .card-compact .card-body {
+          padding: 1rem;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+        .card-normal .card-body {
+          padding: var(--padding-card, 2rem);
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        .join.join-vertical > :where(*:not(:first-child)) {
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: -1px;
+        }
+        .join.join-vertical > :where(*:not(:first-child)):is(.btn) {
+          margin-top: calc(var(--border-btn) * -1);
+        }
+        .join.join-horizontal > :where(*:not(:first-child)) {
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-inline-start: -1px;
+        }
+        .join.join-horizontal > :where(*:not(:first-child)):is(.btn) {
+          margin-inline-start: calc(var(--border-btn) * -1);
+        }
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          text-align: center;
+          --tooltip-tail: 0.1875rem;
+          --tooltip-color: var(--fallback-n, oklch(var(--n) / 1));
+          --tooltip-text-color: var(--fallback-nc, oklch(var(--nc) / 1));
+          --tooltip-tail-offset: calc(100% + 0.0625rem - var(--tooltip-tail));
+        }
+        .tooltip:before,
+        .tooltip:after {
+          opacity: 0;
+          transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+            filter, -webkit-backdrop-filter;
+          transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+            filter, backdrop-filter;
+          transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+            filter, backdrop-filter, -webkit-backdrop-filter;
+          transition-delay: 0.1s;
+          transition-duration: 0.2s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tooltip:after {
+          position: absolute;
+          content: "";
+          border-style: solid;
+          border-width: var(--tooltip-tail, 0);
+          width: 0;
+          height: 0;
+          display: block;
+        }
+        .tooltip:before {
+          max-width: 20rem;
+          white-space: normal;
+          border-radius: 0.25rem;
+          padding: 0.25rem 0.5rem;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          background-color: var(--tooltip-color);
+          color: var(--tooltip-text-color);
+          width: -moz-max-content;
+          width: max-content;
+        }
+        .tooltip.tooltip-open:before {
+          opacity: 1;
+          transition-delay: 75ms;
+        }
+        .tooltip.tooltip-open:after {
+          opacity: 1;
+          transition-delay: 75ms;
+        }
+        .tooltip:hover:before {
+          opacity: 1;
+          transition-delay: 75ms;
+        }
+        .tooltip:hover:after {
+          opacity: 1;
+          transition-delay: 75ms;
+        }
+        .tooltip:has(:focus-visible):after,
+        .tooltip:has(:focus-visible):before {
+          opacity: 1;
+          transition-delay: 75ms;
+        }
+        .tooltip:not([data-tip]):hover:before,
+        .tooltip:not([data-tip]):hover:after {
+          visibility: hidden;
+          opacity: 0;
+        }
+        .tooltip:after,
+        .tooltip-top:after {
+          transform: translate(-50%);
+          border-color: var(--tooltip-color) transparent transparent transparent;
+          top: auto;
+          left: 50%;
+          right: auto;
+          bottom: var(--tooltip-tail-offset);
+        }
+        .absolute {
+          position: absolute;
+        }
+        .relative {
+          position: relative;
+        }
+        .inset-0 {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        .z-10 {
+          z-index: 10;
+        }
+        .m-0 {
+          margin: 0;
+        }
+        .mb-1 {
+          margin-bottom: 0.25rem;
+        }
+        .mr-2 {
+          margin-right: 0.5rem;
+        }
+        .mt-2 {
+          margin-top: 0.5rem;
+        }
+        .mt-6 {
+          margin-top: 1.5rem;
+        }
+        .block {
+          display: block;
+        }
+        .flex {
+          display: flex;
+        }
+        .h-6 {
+          height: 1.5rem;
+        }
+        .min-h-screen {
+          min-height: 100vh;
+        }
+        .w-12 {
+          width: 3rem;
+        }
+        .w-5 {
+          width: 1.25rem;
+        }
+        .w-6 {
+          width: 1.5rem;
+        }
+        .w-full {
+          width: 100%;
+        }
+        .max-w-sm {
+          max-width: 24rem;
+        }
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+        .transform {
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+            rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+            skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+            scaleY(var(--tw-scale-y));
+        }
+        @keyframes moveGradient {
+          0%,
+          to {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        .animate-moveGradient {
+          animation: moveGradient 4s alternate infinite;
+        }
+        .cursor-pointer {
+          cursor: pointer;
+        }
+        .list-inside {
+          list-style-position: inside;
+        }
+        .list-outside {
+          list-style-position: outside;
+        }
+        .list-decimal {
+          list-style-type: decimal;
+        }
+        .list-disc {
+          list-style-type: disc;
+        }
+        .list-none {
+          list-style-type: none;
+        }
+        .flex-row {
+          flex-direction: row;
+        }
+        .flex-col {
+          flex-direction: column;
+        }
+        .items-center {
+          align-items: center;
+        }
+        .justify-start {
+          justify-content: flex-start;
+        }
+        .justify-end {
+          justify-content: flex-end;
+        }
+        .justify-center {
+          justify-content: center;
+        }
+        .justify-between {
+          justify-content: space-between;
+        }
+        .gap-1 {
+          gap: 0.25rem;
+        }
+        .gap-2 {
+          gap: 0.5rem;
+        }
+        .rounded-lg {
+          border-radius: 0.5rem;
+        }
+        .rounded-md {
+          border-radius: 0.375rem;
+        }
+        .border {
+          border-width: 1px;
+        }
+        .border-t {
+          border-top-width: 1px;
+        }
+        .border-solid {
+          border-style: solid;
+        }
+        .\!border-none {
+          border-style: none !important;
+        }
+        .border-\[\#D3D4D9\] {
+          --tw-border-opacity: 1;
+          border-color: rgb(211 212 217 / var(--tw-border-opacity));
+        }
+        .border-neutral-300 {
+          --tw-border-opacity: 1;
+          border-color: rgb(212 212 212 / var(--tw-border-opacity));
+        }
+        .\!bg-transparent {
+          background-color: transparent !important;
+        }
+        .\!bg-white {
+          --tw-bg-opacity: 1 !important;
+          background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+        }
+        .bg-base-100 {
+          --tw-bg-opacity: 1;
+          background-color: var(
+            --fallback-b1,
+            oklch(var(--b1) / var(--tw-bg-opacity))
+          );
+        }
+        .bg-gray-100 {
+          --tw-bg-opacity: 1;
+          background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+        }
+        .bg-white {
+          --tw-bg-opacity: 1;
+          background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        }
+        .bg-gradient-to-br {
+          background-image: linear-gradient(
+            to bottom right,
+            var(--tw-gradient-stops)
+          );
+        }
+        .from-\[\#8556f0\] {
+          --tw-gradient-from: #8556f0 var(--tw-gradient-from-position);
+          --tw-gradient-to: rgb(133 86 240 / 0) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        }
+        .via-\[\#6bedd1\] {
+          --tw-gradient-to: rgb(107 237 209 / 0) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-from),
+            #6bedd1 var(--tw-gradient-via-position), var(--tw-gradient-to);
+        }
+        .via-\[\#d6b379\] {
+          --tw-gradient-to: rgb(214 179 121 / 0) var(--tw-gradient-to-position);
+          --tw-gradient-stops: var(--tw-gradient-from),
+            #d6b379 var(--tw-gradient-via-position), var(--tw-gradient-to);
+        }
+        .to-\[\#439beb\] {
+          --tw-gradient-to: #439beb var(--tw-gradient-to-position);
+        }
+        .bg-\[length\:300\%_300\%\] {
+          background-size: 300% 300%;
+        }
+        .bg-\[position\:0\%_50\%\] {
+          background-position: 0% 50%;
+        }
+        .p-0 {
+          padding: 0;
+        }
+        .p-0\.5 {
+          padding: 0.125rem;
+        }
+        .p-1 {
+          padding: 0.25rem;
+        }
+        .p-2 {
+          padding: 0.5rem;
+        }
+        .p-3 {
+          padding: 0.75rem;
+        }
+        .py-6 {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+        .pb-1 {
+          padding-bottom: 0.25rem;
+        }
+        .pt-0 {
+          padding-top: 0;
+        }
+        .pt-2 {
+          padding-top: 0.5rem;
+        }
+        .text-center {
+          text-align: center;
+        }
+        .text-5xl {
+          font-size: 3rem;
+          line-height: 1;
+        }
+        .text-base {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        .text-sm {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+        .text-xs {
+          font-size: 0.75rem;
+          line-height: 1rem;
+        }
+        .font-bold {
+          font-weight: 700;
+        }
+        .font-normal {
+          font-weight: 400;
+        }
+        .capitalize {
+          text-transform: capitalize;
+        }
+        .italic {
+          font-style: italic;
+        }
+        .leading-6 {
+          line-height: 1.5rem;
+        }
+        .leading-tight {
+          line-height: 1.25;
+        }
+        .text-primary {
+          --tw-text-opacity: 1;
+          color: var(--fallback-p, oklch(var(--p) / var(--tw-text-opacity)));
+        }
+        .text-slate-400 {
+          --tw-text-opacity: 1;
+          color: rgb(148 163 184 / var(--tw-text-opacity));
+        }
+        .text-slate-900 {
+          --tw-text-opacity: 1;
+          color: rgb(15 23 42 / var(--tw-text-opacity));
+        }
+        .text-textCustom {
+          --tw-text-opacity: 1;
+          color: rgb(26 31 42 / var(--tw-text-opacity));
+        }
+        .opacity-100 {
+          opacity: 1;
+        }
+        .opacity-50 {
+          opacity: 0.5;
+        }
+        .\!shadow-none {
+          --tw-shadow: 0 0 #0000 !important;
+          --tw-shadow-colored: 0 0 #0000 !important;
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+        }
+        .shadow-2xl {
+          --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+          --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .shadow-lg {
+          --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+          --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+            0 4px 6px -4px var(--tw-shadow-color);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .\!ring-0 {
+          --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+            var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+          --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+            calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+          box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow, 0 0 #0000) !important;
+        }
+        body {
+          width: 200%;
+        }
+        .before\:\!bottom-\[100\%\]:before {
+          content: var(--tw-content);
+          bottom: 100% !important;
+        }
+        .before\:\!rounded-md:before {
+          content: var(--tw-content);
+          border-radius: 0.375rem !important;
+        }
+        .before\:\!border:before {
+          content: var(--tw-content);
+          border-width: 1px !important;
+        }
+        .before\:\!border-solid:before {
+          content: var(--tw-content);
+          border-style: solid !important;
+        }
+        .before\:\!border-gray-200:before {
+          content: var(--tw-content);
+          --tw-border-opacity: 1 !important;
+          border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+        }
+        .before\:\!bg-white:before {
+          content: var(--tw-content);
+          --tw-bg-opacity: 1 !important;
+          background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+        }
+        .before\:\!text-textSecondary:before {
+          content: var(--tw-content);
+          --tw-text-opacity: 1 !important;
+          color: rgb(61 68 81 / var(--tw-text-opacity)) !important;
+        }
+        .before\:\!\[box-shadow\:0px_1px_8px_0px_\#3D44514D\]:before {
+          content: var(--tw-content);
+          box-shadow: 0 1px 8px #3d44514d !important;
+        }
+        .after\:\!border-transparent:after {
+          content: var(--tw-content);
+          border-color: transparent !important;
+        }
+        @media (min-width: 1024px) {
+          .lg\:flex-row-reverse {
+            flex-direction: row-reverse;
+          }
+          .lg\:text-left {
+            text-align: left;
+          }
+        }
+        .shadow-custom[data-v-a0957544] {
+          box-shadow: 0 0 2rem #0003;
+        }</style
+      ><ddict-div data-v-app=""
+        ><!---->
+        <div></div></ddict-div></template
+  ></ddict-div>
+</html>

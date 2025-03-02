@@ -1,0 +1,9 @@
+/* Responsive css */
+@media screen and (max-width: 767px) {
+    .bafg-frontend-upload-buttons{
+        flex-direction: column;
+    }
+    button.bafg-reset-preview-btn {
+        width: 100%;
+    }
+}

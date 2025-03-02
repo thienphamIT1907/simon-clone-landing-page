@@ -1,0 +1,184 @@
+.bafg-filter-control {
+	border-style: solid;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-left-width: 0;
+	border-bottom-width: 0;
+	color: #ffffff;
+	border-color: #0274be;
+	background-color: #0274be;
+	border-radius: 2px;
+	padding-top: 10px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1;
+	outline: 0
+}
+
+.bafg-slider-info-wraper {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+.bafg-filter-control:hover,
+.bafg-filter-control:focus,
+.bafg-filter-control.bafg-filter-active {
+	color: #ffffff;
+	background-color: #3a3a3a;
+	border-color: #3a3a3a;
+	outline: 0
+}
+
+.bafg-slider-info .bafg_slider_readmore_button {
+	color: #fff;
+	background: #0652DD;
+	padding: 10px 25px;
+	margin-top: 10px;
+	display: inline-block;
+	border-radius: 30px;
+	transition: 0.5s;
+	border: 1px solid #0652DD;
+	font-size: 15px;
+	text-decoration: none !important
+}
+
+.bafg-slider-info .bafg-slider-title {
+	margin: 20px 0
+}
+
+.bafg-slider-info .bafg_slider_readmore_button:hover {
+	color: #0652DD;
+	background: #f8f8f8;
+}
+
+.design-8 .twentytwenty-handle {
+	height: 0 !important;
+	width: 0 !important;
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+	border: 0 !important;
+}
+
+.design-8 .twentytwenty-left-arrow,
+.design-8 .twentytwenty-right-arrow,
+.design-8 .twentytwenty-up-arrow,
+.design-8 .twentytwenty-down-arrow {
+	width: 0 !important;
+	height: 0 !important;
+	border: 0 !important;
+}
+
+.twentytwenty-vertical .design-8 .twentytwenty-handle::after {
+	margin-right: 0 !important;
+}
+
+.twentytwenty-vertical .design-8 .twentytwenty-handle::before {
+	margin-left: 0 !important;
+}
+
+.twentytwenty-horizontal .design-8 .twentytwenty-handle::before {
+	margin-bottom: 0 !important;
+}
+
+.twentytwenty-horizontal .design-8 .twentytwenty-handle::after {
+	margin-top: 0 !important;
+}
+.twentytwenty-vertical .design-2 .twentytwenty-handle::after {
+	right: 50%;
+	margin-right: 60px;
+}
+.twentytwenty-vertical .design-2 .twentytwenty-handle::before{
+	left: 50%;
+	margin-left: 60px;
+}
+
+.bafg-twentytwenty-container {
+	position: relative;
+	height: 281px;
+	width: auto;
+	margin: 0 auto;
+}
+  
+.bafg-twentytwenty-container img.top:hover {
+	opacity:0;
+}
+.bafg-fade-effect {
+	position:relative;
+	height:281px;
+	width:100%;
+}
+
+.bafg-fade-effect img {
+	position:absolute;
+	left:0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+.bafg-al{
+	transition: all 0.8s;
+}
+.bafg-fade-effect img.top:hover {
+	opacity:0;
+}
+.bafg-fade-effect .bafg-after-image:hover .bafg-al{
+	opacity: 0;
+}
+span.bafg-bl,span.bafg-al {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.2);
+	padding: 5px 10px;
+	color: #f2f2f2;
+}
+/* Filter Gallery adjustment padding */
+.bafg_gallery_filter .bafg-col-12,.bafg_gallery_filter .bafg-col-6,.bafg_gallery_filter .bafg-col-3,.bafg_gallery_filter .bafg-col-4{
+	padding: 0 15px;
+}
+.twentytwenty-wrapper .twentytwenty-wrapper{
+	padding: 0 !important;
+}
+/* Vertical design 7 */
+.twentytwenty-vertical .design-7 .bafg-handle-wrapper {
+    right: -20px;
+    height: 100%;
+    width: 10px;
+    bottom: 0;
+}
+
+.twentytwenty-vertical .design-7 .bafg-handle-wrapper .twentytwenty-handle:before,.twentytwenty-vertical .design-7 .bafg-handle-wrapper .twentytwenty-handle:after,.twentytwenty-vertical .design-7 .bafg-handle-wrapper .twentytwenty-handle span{
+	display: none;
+}
+.twentytwenty-vertical .design-7 .bafg-handle-wrapper .twentytwenty-handle {
+    width: 10px;
+    margin-left: -5px;
+    height: 20px;
+    margin-top: -10px;
+}
+/* Image link CSS */
+.bafg-image-link-enabled .twentytwenty-overlay:hover {
+    cursor: pointer;
+}
+/*Frontend preview test*/
+.bafg-frontend-upload-buttons {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bafg-frontend-upload-buttons div {
+    border: 1px solid #9c9c9c;
+    padding: 10px;
+    margin: 5px;
+}
+
+.bafg-bimage-up {
+    border-right: unset;
+}

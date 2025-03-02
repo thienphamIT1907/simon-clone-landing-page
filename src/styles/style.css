@@ -983,68 +983,68 @@ html {
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(1)
   a::before {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-detailed-estimate-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-detailed-estimate-icon.svg);
 }
 .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(2)
   a::before {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-3-year-guarantee-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-3-year-guarantee-icon.svg);
 }
 .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(3)
   a::before {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-liability-insurance-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-liability-insurance-icon.svg);
 }
 .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(4)
   a::before {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-wisb-coverage-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-wisb-coverage-icon.svg);
 }
 .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(5)
   a::before {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-top-paint-primer-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-top-paint-primer-icon.svg);
 }
 .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(6)
   a::before {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-safety-training-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-safety-training-icon.svg);
 }
 
 .testimonials-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(1)
   a::before {
-  background-image: url(/wp-content/uploads/sites/5/2023/08/studentworks-veteran-operators-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/5/2023/08/studentworks-veteran-operators-icon.svg);
 }
 .testimonials-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(2)
   a::before {
-  background-image: url(/wp-content/uploads/sites/5/2023/08/studentworks-record-holders-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/5/2023/08/studentworks-record-holders-icon.svg);
 }
 .testimonials-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(3)
   a::before {
-  background-image: url(/wp-content/uploads/sites/5/2023/08/studentworks-district-managers-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/5/2023/08/studentworks-district-managers-icon.svg);
 }
 .testimonials-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(4)
   a::before {
-  background-image: url(/wp-content/uploads/sites/5/2023/08/studentworks-alumni-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/5/2023/08/studentworks-alumni-icon.svg);
 }
 .testimonials-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(5)
   a::before {
-  background-image: url(/wp-content/uploads/sites/5/2024/10/studentworks-parents-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/5/2024/10/studentworks-parents-icon.svg);
 }
 
 .why-choose-us-tabs.vc_tta.vc_general ul.vc_tta-tabs-list .vc_tta-tab::after,
@@ -1143,28 +1143,28 @@ body:not(.sw-region-quebec)
   .since-1981-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/2023/07/studentworks-since-1981-img.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/07/studentworks-since-1981-img.jpg);
 }
 
 body.sw-region-quebec
   .since-1981-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/2023/10/studentworks-since-1981-img-fr.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/10/studentworks-since-1981-img-fr.jpg);
 }
 
 body:not(.sw-region-quebec).multisite-id-2
   .since-1981-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/09/studentworks-window-since-1981-img-v2.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/09/studentworks-window-since-1981-img-v2.jpg);
 }
 
 body.sw-region-quebec.multisite-id-2
   .since-1981-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/10/studentworks-window-since-1981-img-fr.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/10/studentworks-window-since-1981-img-fr.jpg);
 }
 
 .since-1981-row > .wpb_column:nth-child(1) > .vc_column-inner,
@@ -1318,21 +1318,21 @@ body.sw-region-quebec.multisite-id-2
 }
 
 body:not(.sw-region-quebec).multisite-id-1 .homeowners-title {
-  background-image: url(/wp-content/uploads/2023/10/studentworks-homeowners-title-bg-v2-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/10/studentworks-homeowners-title-bg-v2-scaled.jpg);
 }
 
 body.sw-region-quebec.multisite-id-1 .homeowners-title {
-  background-image: url(/wp-content/uploads/2023/10/studentworks-homeowners-title-bg-fr-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/10/studentworks-homeowners-title-bg-fr-scaled.jpg);
 }
 
 html[lang="fr-FR"]
   body:not(.sw-region-quebec).multisite-id-1
   .homeowners-title {
-  background-image: url(/wp-content/uploads/2023/11/studentworks-homeowners-title-bg-fr-ontario-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/11/studentworks-homeowners-title-bg-fr-ontario-scaled.jpg);
 }
 
 html[lang="en-US"] body.sw-region-quebec.multisite-id-1 .homeowners-title {
-  background-image: url(/wp-content/uploads/2023/11/studentworks-homeowners-title-bg-eng-qc-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/11/studentworks-homeowners-title-bg-eng-qc-scaled.jpg);
 }
 
 .homestars-row {
@@ -1923,28 +1923,28 @@ body:not(.sw-region-quebec)
   .looking-job-summer-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/2023/08/studentworks-looking-job-summer-left-img.png);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/08/studentworks-looking-job-summer-left-img.png);
 }
 
 body.sw-region-quebec
   .looking-job-summer-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/2023/10/studentworks-looking-job-summer-left-img-fr.png);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/10/studentworks-looking-job-summer-left-img-fr.png);
 }
 
 body:not(.sw-region-quebec).multisite-id-2
   .looking-job-summer-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-left-img-en-v2.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-left-img-en-v2.jpg);
 }
 
 body.sw-region-quebec.multisite-id-2
   .looking-job-summer-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-left-img-v2.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-left-img-v2.jpg);
 }
 
 .looking-job-summer-row > .wpb_column:nth-child(1) > .vc_column-inner {
@@ -1955,28 +1955,28 @@ body:not(.sw-region-quebec)
   .looking-job-summer-row
   > .wpb_column:nth-child(3)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/2023/08/studentworks-looking-job-summer-right-img.png);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/08/studentworks-looking-job-summer-right-img.png);
 }
 
 body.sw-region-quebec
   .looking-job-summer-row
   > .wpb_column:nth-child(3)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/2023/10/studentworks-looking-job-summer-right-img-fr.png);
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/10/studentworks-looking-job-summer-right-img-fr.png);
 }
 
 body:not(.sw-region-quebec).multisite-id-2
   .looking-job-summer-row
   > .wpb_column:nth-child(3)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-right-img-en-v2.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-right-img-en-v2.jpg);
 }
 
 body.sw-region-quebec.multisite-id-2
   .looking-job-summer-row
   > .wpb_column:nth-child(3)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-right-img-v2.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-looking-job-summer-right-img-v2.jpg);
 }
 
 .looking-job-summer-row > .wpb_column:nth-child(3) > .vc_column-inner {
@@ -2061,14 +2061,14 @@ body:not(.sw-region-quebec).multisite-id-2
   .apply-now-inner-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/09/studentworks-window-apply-now-img-v2.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/09/studentworks-window-apply-now-img-v2.jpg);
 }
 
 body.sw-region-quebec.multisite-id-2
   .apply-now-inner-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/10/studentworks-window-apply-now-img-fr.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/10/studentworks-window-apply-now-img-fr.jpg);
 }
 
 .looking-job-summer-subtitle h5 {
@@ -2500,21 +2500,21 @@ form.search-form input.search-field:-ms-input-placeholder {
 html[lang="en-US"]
   body:not(.sw-region-quebec).multisite-id-2
   .homeowners-title {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-eng-ontario-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-eng-ontario-scaled.jpg);
 }
 
 html[lang="fr-FR"] body.sw-region-quebec.multisite-id-2 .homeowners-title {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-fr-qc-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-fr-qc-scaled.jpg);
 }
 
 html[lang="fr-FR"]
   body:not(.sw-region-quebec).multisite-id-2
   .homeowners-title {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-fr-ontario-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-fr-ontario-scaled.jpg);
 }
 
 html[lang="en-US"] body.sw-region-quebec.multisite-id-2 .homeowners-title {
-  background-image: url(/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-eng-qc-scaled.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/11/studentworks-window-homeowners-title-bg-eng-qc-scaled.jpg);
 }
 
 .window-services-inner-row .wpb_single_image img {
@@ -2548,28 +2548,28 @@ html[lang="en-US"] body.sw-region-quebec.multisite-id-2 .homeowners-title {
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(1)
   a::before {
-  background-image: url(/wp-content/uploads/sites/2/2023/08/studentworks-window-detailed-estimate-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/08/studentworks-window-detailed-estimate-icon.svg);
 }
 .multisite-id-2
   .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(2)
   a::before {
-  background-image: url(/wp-content/uploads/sites/2/2023/08/studentworks-window-liability-insurance-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/08/studentworks-window-liability-insurance-icon.svg);
 }
 .multisite-id-2
   .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(3)
   a::before {
-  background-image: url(/wp-content/uploads/sites/2/2023/08/studentworks-window-wisb-coverage-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/08/studentworks-window-wisb-coverage-icon.svg);
 }
 .multisite-id-2
   .why-choose-us-tabs.vc_tta.vc_general
   ul.vc_tta-tabs-list
   .vc_tta-tab:nth-child(4)
   a::before {
-  background-image: url(/wp-content/uploads/sites/2/2023/08/studentworks-window-safety-training-icon.svg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/08/studentworks-window-safety-training-icon.svg);
 }
 
 .dist-btn.type5 {
@@ -3513,7 +3513,7 @@ body.sw-region-quebec.multisite-id-2
 .wpcf7-form select {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
-  background-image: url(/wp-content/uploads/2023/11/studentworks-arrow-select.png) !important;
+  background-image: url(https://studentworks.com/wp-content/uploads/2023/11/studentworks-arrow-select.png) !important;
   background-repeat: no-repeat !important;
   background-position-x: calc(100% - 44px) !important;
   background-position-y: center !important;
@@ -3593,26 +3593,26 @@ body.sw-region-quebec.multisite-id-2
   .estimate-our-services-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-window-fr.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-window-fr.jpg);
 }
 body:not(.sw-region-quebec).multisite-id-2
   .estimate-our-services-row
   > .wpb_column:nth-child(1)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-window-en.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-window-en.jpg);
 }
 
 body.sw-region-quebec.multisite-id-2
   .estimate-our-services-row
   > .wpb_column:nth-child(2)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-siding-fr.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-siding-fr.jpg);
 }
 body:not(.sw-region-quebec).multisite-id-2
   .estimate-our-services-row
   > .wpb_column:nth-child(2)
   > .vc_column-inner {
-  background-image: url(/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-siding-en.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/2/2023/12/studentworks-window-estimate-services-siding-en.jpg);
 }
 
 .operators-row .operators-row-inner .operators-operator-picture {
@@ -3705,7 +3705,7 @@ body:not(.sw-region-quebec).multisite-id-2
 }
 
 body.multisite-id-5 .for-parents-title {
-  background-image: url(/wp-content/uploads/sites/5/2024/11/studentworks-for-parents-title-bg.jpg);
+  background-image: url(https://studentworks.com/wp-content/uploads/sites/5/2024/11/studentworks-for-parents-title-bg.jpg);
 }
 
 body.multisite-id-5

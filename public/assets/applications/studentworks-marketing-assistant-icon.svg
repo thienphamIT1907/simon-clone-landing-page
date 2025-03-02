@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="131" viewBox="0 0 131 131">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_272" data-name="Rectangle 272" width="80" height="73" fill="none" stroke="#fff" stroke-width="1"></rect>
+    </clipPath>
+  </defs>
+  <g id="Group_828" data-name="Group 828" transform="translate(-1584 -1380)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="65.5" cy="65.5" r="65.5" transform="translate(1584 1380)" fill="#e52027"></circle>
+    <g id="Group_795" data-name="Group 795" transform="translate(1609 1409)">
+      <g id="Group_794" data-name="Group 794" clip-path="url(#clip-path)">
+        <path id="Path_178" data-name="Path 178" d="M19,18.407V1H64.259V49.741H19V37.556" transform="translate(14.074 0.741)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></path>
+        <path id="Path_179" data-name="Path 179" d="M12.963,18.407c3.986,0,6.963-3.34,6.963-7.459V8.459C19.926,4.34,16.949,1,12.963,1S6,4.34,6,8.459v2.489C6,15.067,8.977,18.407,12.963,18.407Z" transform="translate(4.444 0.741)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></path>
+        <path id="Path_180" data-name="Path 180" d="M25.37,62.741V20.963H35.815c5.254,0,6.963-3.1,6.963-6.963H9.7C3.467,14,1,16.632,1,24.444V36.63c0,3.734,1.488,6.963,5.222,6.963H7.963" transform="translate(0.741 10.37)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></path>
+        <line id="Line_13" data-name="Line 13" y2="24" transform="translate(17 49)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></line>
+        <line id="Line_14" data-name="Line 14" y2="38" transform="translate(9 35)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></line>
+        <path id="Path_181" data-name="Path 181" d="M23,33.37h8.7l3.481-6.963h8.7L50.852,9h5.222" transform="translate(17.037 6.667)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></path>
+      </g>
+    </g>
+  </g>
+</svg>
