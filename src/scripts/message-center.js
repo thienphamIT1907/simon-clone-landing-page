@@ -45,7 +45,7 @@ form.addEventListener("submit", (event) => {
     disposition_id: disposition.estimateResidential,
   };
 
-  fetch(BASE_URL, {
+  fetch("/api", {
     method: "POST",
     headers: {
       "X-Requested-With": "XMLHttpRequest",

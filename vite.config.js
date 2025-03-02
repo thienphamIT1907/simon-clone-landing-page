@@ -1,6 +1,18 @@
-import { defineConfig } from "vite";
-import dns from "node:dns";
+import { defineConfig, loadEnv } from "vite";
 
-dns.setDefaultResultOrder("verbatim");
+export default defineConfig(({ mode }) => {
+  // Load environment variables manually
+  const env = loadEnv(mode, process.cwd());
 
-export default defineConfig({});
+  return {
+    server: {
+      proxy: {
+        "/api": {
+          target: env.VITE_SIMON_BACKEND_ENDPOINT || "http://localhost:3000",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ""),
+        },
+      },
+    },
+  };
+});
