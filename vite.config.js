@@ -4,6 +4,14 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
   return {
+    build: {
+      rollupOptions: {
+        input: {
+          main: "index.html",
+          application: "application.html",
+        },
+      },
+    },
     server: {
       proxy: {
         "/api": {

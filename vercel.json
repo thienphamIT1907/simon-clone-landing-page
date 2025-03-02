@@ -3,6 +3,7 @@
     {
       "source": "/api/:path*",
       "destination": "/api/proxy.js"
-    }
+    },
+    { "source": "/application", "destination": "/application.html" }
   ]
 }
